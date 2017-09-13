@@ -1,0 +1,859 @@
+summary of final partitions:
+
+failed to configure resourcemgmt subsystem err 10 
+size: 50
+Component State Change Component * is in the * state (HWID * 
+size: 5838
+
+* (command 1894) 
+size: 4
+* (command 1893) 
+size: 2
+* (command 1876) 
+size: 2
+* (command 1875) 
+size: 2
+* (command 1874) 
+size: 2
+* (command 1892) 
+size: 8
+* (command 1891) 
+size: 8
+* (command 1873) 
+size: 2
+boot (command * 
+size: 13399
+halt (command * 
+size: 616
+wait (command * 
+size: 12967
+clusterAddMember (command * 
+size: 264
+risBoot (command * 
+size: 268
+bootGenvmunix (command * 
+size: 262
+member_delete (command * 
+size: 15
+haltcluster (command * 
+size: 44
+
+Command has completed successfully 
+size: 1741
+
+Targeting domains * and nodes * 
+size: 666
+Targeting domains node-D7 and nodes * 
+size: 151
+
+Targeting domains * and nodes * child of command * 
+size: 1291
+
+psu failure\,ambient * 
+size: 517
+
+7, content:PSU status ( * off * ) 
+size: 47
+
+ambient * threshold exceeded 
+size: 28
+
+Temperature * exceeds warning threshold 
+size: 941
+
+ClusterFileSystem There is no server for ServerFileSystem domain * 
+size: 5126
+
+1NIFF node * detected * network connection on network * via interface * 
+size: 24248
+
+ServerFileSystem An ServerFileSystem domain panic has occurred on * 
+size: 70
+
+Fan speeds ( * 3552 * 3515 * ) 
+size: 19244
+10, content:Fan speeds ( 3534 3534 3375 * 3497 3479 ) 
+size: 2528
+
+fan failure\,ambient * 
+size: 2
+
+Command has been aborted 
+size: 257
+
+Command Failed on * 
+size: 194
+
+Failed subcommands * 
+size: 88
+
+power/control ok 
+size: 81
+
+power/control problem 
+size: 355
+
+no recent update 
+size: 61
+
+update received 
+size: 34
+
+Link error 
+size: 4002
+
+Link in reset 
+size: 2344
+
+Link ok 
+size: 2257
+
+Link error on broadcast tree * 
+size: 1167
+
+* ServerFileSystem domain * is full 
+size: 2599
+
+ClusterFileSystem ServerFileSystem domain * is no longer served by node * 
+size: 8152
+
+running 
+size: 30064
+
+configured out 
+size: 19839
+
+blocked 
+size: 2286
+
+not responding 
+size: 12367
+
+starting 
+size: 148
+
+down 
+size: 97
+
+closing 
+size: 70
+
+fan2 has failed 
+size: 2
+warning 
+size: 49741
+critical 
+size: 4629
+normal 
+size: 45818
+ambient 36 
+size: 2543
+ambient 27 
+size: 4983
+ambient 26 
+size: 4046
+ambient 33 
+size: 5234
+ambient 34 
+size: 2199
+ambient 28 
+size: 6913
+ambient 30 
+size: 6166
+ambient 32 
+size: 4359
+ambient 23 
+size: 260
+ambient 29 
+size: 6006
+ambient 31 
+size: 5315
+ambient 25 
+size: 3587
+ambient 24 
+size: 1003
+ambient 35 
+size: 1584
+ambient 38 
+size: 171
+ambient 37 
+size: 211
+ambient 22 
+size: 24
+ambient 39 
+size: 135
+ 
+size: 3
+1* (command * Error Unknown We failed to determine the state of this node 
+size: 95
+10, content:halt (command * Error scrun failed\, couldn\047t send shutdown command 
+size: 250
+* (command * Error timeout waiting for SRM * 
+size: 17
+* (command * Error Console-Busy Port already in use 
+size: 12
+Linkerror event interval expired 
+size: 84894
+17, content:clusterAddMember (command 1900) Error cluster_add_member failed unexpectedly\, check /cluster/admin/cluster_add_member.log <ABORT code errored kill 601373 no such process> 
+size: 1
+1risBoot (command * Error Timed out while waiting for SRM prompt <ABORT code completed> 
+size: 5
+risBoot (command * Error failed to RIS boot <ABORT code completed> 
+size: 3
+1bootGenvmunix (command * Error Timeout waiting for system to come up <ABORT code completed> 
+size: 3
+1member_delete (command * Error * is NOT a member of cluster * 
+size: 2
+1bootGenvmunix (command 1918) Error node returned to srm while booting <ABORT code completed> 
+size: 1
+boot (command * Error HALT asserted\, cannot continue 
+size: 167
+10, content:boot (command * Error timeout waiting for Loading LMF licenses 
+size: 23
+7, content:boot (command * Error timeout while booting. 
+size: 3
+10, content:boot (command * Error node went to SRM while * 
+size: 32
+7, content:Command Cancelled - cluster would lose quorum 
+size: 1
+10, content:halt (command * Error Couldn\047t Connect to console (state REFUSED) 
+size: 98
+1clusterAddMember (command * Error Cannot run clusterAddMember\, because * connection state is REFUSED and needs to be SRM 
+size: 3
+haltcluster (command * Error haltcluster bad spawn id 
+size: 6
+10, content:member_delete (command 2921) Error node is up according to cluster_get_info 
+size: 1
+link errors remain current 
+size: 13645
+boot (command * Error System could not find kernel 
+size: 3
+boot (command 3833) Error CMF-Port This node\047s port is not connected 
+size: 1
+
+
+10, content:inconsistent nodesets * 0x00000002 * <ok> * 0x0000003e <ok>  
+size: 9
+
+inconsistent nodesets node-0 * <ok> node-2 * <ok>  
+size: 3
+
+active 
+size: 1263
+
+inconsistent nodesets * 0x000001fe <ok> * <ok>  
+size: 2
+
+inconsistent nodesets * 0x000001fe <ok> * 0x000001fe <ok> node-65 * <ok> node-66 * 
+<ok> node-69 * <ok> * <ok>  
+size: 5
+
+inconsistent nodesets * 0x1001fdfe <ok> * 0x1001fdfe <ok> * 0x1001fdfe <ok> * 0x1001fdfe <ok> * 0x1001fdfe <ok> * 0x1001fdfe <ok> * 0x1001fdfe <ok> * <ok> * 0x11fffdfe <ok>  
+size: 3
+
+inconsistent nodesets * <ok> * <ok> * <ok> * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe <ok> * <ok>  
+size: 8
+
+inconsistent nodesets node-160 * <ok> node-162 0x1001fdfe <ok> * 0x1001fdfe <ok>  
+size: 4
+inconsistent nodesets * 0x000001fe <ok> * 0x000001fe <ok> node-130 * <ok> * <ok>  
+size: 2
+
+inconsistent nodesets * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe <ok> * <ok> * <ok> * <ok> * <ok> * <ok>  
+size: 7
+
+3inconsistent nodesets * 0x1001fdfe <ok> * 0x1001fdfe <ok> * 0x1001fdfe <ok> * 0x1001fdfe <ok> * 0x1001fdfe <ok> * 0x1001fdfe <ok> * 0x1001fdfe <ok> * 0x1001fdfe * <ok> * <ok> * <ok> * <ok> * <ok>  
+size: 5
+
+inconsistent nodesets * <ok> * 0x0000000e <ok> * 0x0000000e <ok>  
+size: 28
+
+inconsistent nodesets * 0x0000000e <ok> * <ok>  
+size: 15
+
+inconsistent nodesets * <ok> node-226 * <ok> node-225 * <ok>  
+size: 4
+
+inconsistent nodesets node-0 * <ok> node-1 * <ok> * <ok> * <ok> * <ok> node-2 0x1001fdfe <ok> * 0x1001fdfe <ok> * 0x1001fdfe <ok>  
+size: 3
+
+inconsistent nodesets * <ok> * <ok> * 0x1001fdfe <ok> * 0x1001fdfe <ok> * 0x1001fdfe <ok> * 0x1001fdfe <ok> * 0x1001fdfe <ok>  
+size: 7
+
+responding 
+size: 181
+
+not-responding 
+size: 181
+
+inconsistent nodesets * <ok> * 0x1fffffffe <ok> * 0x1fffffffe <ok>  
+size: 7
+
+inconsistent nodesets * 0x000001fe * <ok> * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe * <ok> * <ok>  
+size: 11
+
+inconsistent nodesets node-33 0x000001fc <ok> node-37 0x000001fc <ok> node-39 0x000001fc <ok> node-34 0x000001fc <ok> node-35 0x000001fc <ok> node-36 0x000001fc <ok> node-38 0x000001fc <ok> node-41 0x0801fdfc <ok> node-46 0x0801fdfc <ok> node-58 0x0801fdfc <ok> node-43 0x0801fdfc <ok> node-44 0x0801fdfc <ok> node-47 0x0801fdfc <ok> node-45 0x0801fdfc <ok> node-42 0x0801fdfc <ok>  
+size: 1
+
+inconsistent nodesets node-255 * <ok> node-224 * <ok> * <ok> * <ok>  
+size: 4
+
+inconsistent nodesets * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe * <ok> * <ok>  
+size: 6
+
+inconsistent nodesets * 0x1fffffffe * <ok> * <ok> * <ok> * <ok>  
+size: 8
+
+inconsistent nodesets * <ok> node-33 * <ok> node-32 0x00000006 <ok>  
+size: 2
+
+inconsistent nodesets node-193 0x0000000e <ok> node-194 0x0000000e <ok> node-192 0x0000000e <ok> node-195 0x000087fe <ok> node-198 0x000087fe <ok> node-201 0x000087fe <ok> node-199 0x00008ffe <ok> node-200 0x00008ffe <ok> node-196 0x00008ffe <ok> node-197 0x00008ffe <ok> node-206 0x00008ffe <ok>  
+size: 1
+
+3inconsistent nodesets * 0x0000000e <ok> * 0x0000000e <ok> * 0x0000000e <ok> * 0x00010fee <ok> * 0x00010fee <ok> * 0x00010fee <ok> * 0x00010fee <ok> * 0x00010fee <ok> * 0x00010fee <ok> * 0x00010fee <ok> * 0x00010fee <ok>  
+size: 2
+
+3inconsistent nodesets node-97 0x0000000c <ok> node-98 0x0000000c <ok> node-104 0x00040fec <ok> node-102 0x00040fec <ok> node-113 0x00040fec <ok> node-101 0x00040fec <ok> node-106 0x00040fec <ok> node-100 0x00040fec <ok> node-103 0x00040fec <ok> node-105 0x00040fec <ok>  
+size: 1
+
+3inconsistent nodesets * 0x0000000e <ok> * 0x0000000e <ok> * 0x0000000e <ok> * 0x00020fee <ok> * 0x00020fee <ok> * 0x00020fee <ok> * 0x00020fee <ok> * 0x00020fee <ok> * 0x00020fee <ok> * 0x00020fee <ok> * 0x00020fee <ok>  
+size: 2
+
+1inconsistent nodesets * 0x0000000e <ok> * 0x0000000e <ok> * 0x0000000e * <ok> * <ok>  
+size: 5
+
+inconsistent nodesets * 0x0000000e <ok> * 0x0000000e <ok> * <ok>  
+size: 4
+
+1inconsistent nodesets * <ok> * <ok> * 0x000001fe <ok> * 0x000001fe <ok>  
+size: 2
+
+1inconsistent nodesets * node-0 * <ok> node-1 * <ok> node-2 * <ok> node-15 * 0x01fffffe <ok> * <ok>  
+size: 3
+
+2inconsistent nodesets node-63 0x1fffffffe <ok> node-32 0x000095fe <ok> node-33 0x000095fe <ok> node-34 0x000095fe <ok> node-54 0x1c08003fe <ok> node-47 0x0105fffe <ok> node-40 0x1c08003fe <ok>  
+size: 1
+
+1inconsistent nodesets node-191 * 0x1fffffffe * <ok> node-160 * <ok> node-161 * <ok>  
+size: 5
+
+3inconsistent nodesets node-255 0x1ffffeffe <ok> node-224 0x1fffeffe <ok> node-226 0xffffeffe <ok> node-230 0xffffeffe <ok> node-228 0xffffeffe <ok> node-231 0xffffeffe <ok> node-232 0xffffeffe <ok> node-229 0xffffeffe <ok> node-227 0xffffeffe <ok> node-247 0xffffeffe <ok>  
+size: 1
+
+inconsistent nodesets node-159 * <ok> node-128 * <ok>  
+size: 9
+
+1inconsistent nodesets * node-65 * <ok> node-66 * <ok> node-64 * <ok>  
+size: 4
+
+1inconsistent nodesets node-228 0x0001e1fe <ok> node-230 0x0001e1fe <ok> node-229 0x0001f9fe <ok>  
+size: 1
+
+10, content:inconsistent nodesets node-127 * <ok> * 0x1fffffffa * <ok>  
+size: 3
+
+inconsistent nodesets node-255 * <ok> node-226 * <ok>  
+size: 4
+
+2inconsistent nodesets * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe <ok> * <ok> * <ok> * <ok> * <ok>  
+size: 15
+
+5inconsistent nodesets * <ok> * 0x1fffffffc <ok> * 0x1fffffffc * <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc * <ok> * 0x1fffffffc <ok> * <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc * <ok>  
+size: 10
+
+1inconsistent nodesets * node-32 * <ok> * 0x000001fe <ok> node-33 * <ok> node-35 * <ok>  
+size: 3
+
+1inconsistent nodesets node-63 * <ok> node-32 * <ok> node-34 * <ok> node-33 * <ok>  
+size: 6
+
+inconsistent nodesets node-97 * 0x000001fe <ok> node-96 0x000001fe * <ok> * <ok> * <ok> node-101 * <ok> * <ok>  
+size: 2
+
+inconsistent nodesets node-224 0x000001fe <ok> node-226 0x0001e1fe <ok>  
+size: 1
+
+1inconsistent nodesets * 0x1fffffffe * <ok> * 0x0000000e <ok> * 0x0000000e <ok>  
+size: 4
+2inconsistent nodesets node-63 0x1fffffffe <ok> node-62 0x1fffffffe <ok> node-61 0x1fffffffe <ok> node-60 0x3ffffffe <ok> node-32 0x3ffffffe <ok> node-33 0x3ffffffe <ok> node-34 0x3ffffffe <ok>  
+size: 1
+2inconsistent nodesets node-192 * <ok> node-193 * <ok> node-198 * <ok> * <ok> node-197 * <ok> * <ok> node-195 * <ok>  
+size: 2
+1inconsistent nodesets * 0x000001fe * <ok> * 0x0401fdfe <ok> * 0x0401fdfe <ok> * 0x0401fdfe <ok>  
+size: 4
+1inconsistent nodesets * 0x000001fe * <ok> * <ok> * 0x1001fdfe <ok> * 0x1001fdfe <ok> * 0x1001fdfe <ok>  
+size: 3
+2inconsistent nodesets * 0x000001fe * <ok> * <ok> * 0x0001fdfe <ok> * 0x0001fdfe <ok> * 0x0001fdfe <ok> * 0x0001fdfe * <ok>  
+size: 3
+1inconsistent nodesets node-97 0x000001fe <ok> node-98 0x000001fe <ok> node-96 0x0000fdfe <ok>  
+size: 1
+2inconsistent nodesets * 0x000001fe <ok> * 0x000001fe <ok> * <ok> * 0x000001fe <ok> * 0x000001fe <ok> * <ok> * <ok> * <ok>  
+size: 4
+inconsistent nodesets * 0x000001fe <ok> * 0x000001fe <ok> * <ok>  
+size: 5
+1inconsistent nodesets node-97 0x000001fe <ok> node-96 0x0001fdfe <ok> node-99 0x0001fdfe <ok>  
+size: 1
+2inconsistent nodesets node-161 0x000001fe <ok> node-160 * <ok> node-162 * <ok> node-167 * <ok> * <ok> node-166 * <ok> * <ok>  
+size: 2
+2inconsistent nodesets * <ok> * <ok> * 0x2001fdfe <ok> * 0x2001fdfe <ok> * 0x2001fdfe <ok> * 0x2001fdfe <ok> * 0x2001fdfe * <ok>  
+size: 3
+30, content:inconsistent nodesets node-99 0x2001fdde <ok> node-97 0x2001fdde <ok> node-101 0x2001fdde <ok> node-98 0x2001fdde <ok> node-96 0x2001fdde <ok> node-102 0x2001fdde <ok> node-103 0x2001fdde <ok> node-106 0x200ffdde <ok> node-110 0x200ffdde <ok>  
+size: 1
+1inconsistent nodesets node-255 * <ok> node-224 * <ok> node-225 * <ok>  
+size: 6
+1inconsistent nodesets * 0x1fffffffc <ok> * 0x0000000c <ok> * 0x0000000c <ok>  
+size: 2
+inconsistent nodesets node-192 0x00000002 <ok> node-193 0x00000006 <ok>  
+size: 1
+inconsistent nodesets * 0x00000006 <ok> * 0x0000000e <ok>  
+size: 2
+27, content:inconsistent nodesets * 0x000001fe <ok> * <ok> * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe * <ok>  
+size: 12
+10, content:inconsistent nodesets node-63 0x1fffffffe * <ok> node-34 * <ok>  
+size: 9
+2inconsistent nodesets * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe <ok> node-199 0x000001fe <ok> node-197 0x000001fe <ok> * 0x000001fe * <ok> node-196 * <ok>  
+size: 2
+1inconsistent nodesets * <ok> * <ok> * 0x0801fdfe <ok> * 0x0801fdfe <ok> * 0x0801fdfe <ok> * 0x0801fdfe <ok>  
+size: 9
+2inconsistent nodesets * node-36 * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe <ok> node-35 * 0x000001fe <ok> * <ok> * <ok>  
+size: 3
+27, content:inconsistent nodesets * 0x000001fe <ok> * 0x000001fe <ok> * <ok> * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe * <ok>  
+size: 10
+2inconsistent nodesets * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe * <ok> * <ok> * <ok>  
+size: 7
+1inconsistent nodesets node-63 0x1fffffffe <ok> node-32 * <ok> node-33 * <ok> node-34 * <ok>  
+size: 5
+1inconsistent nodesets * 0x000001fe <ok> * 0x1001fdfe <ok> * 0x1001fdfe <ok> * 0x1001fdfe <ok>  
+size: 2
+10, content:inconsistent nodesets * node-67 0x000001fe <ok> node-64 * <ok>  
+size: 4
+3inconsistent nodesets * <ok> * 0x0401fdfe <ok> * 0x0401fdfe <ok> * <ok> * 0x0401fdfe <ok> * <ok> * 0x0401fdfe <ok> * <ok> * 0x05fffdfe <ok> * 0x05fffdfe <ok> * 0x05fffdfe <ok> * 0x05fffdfe <ok>  
+size: 3
+2inconsistent nodesets * node-129 0x000001fe <ok> * 0x000001fe <ok> node-128 * 0x000001fe <ok> * <ok> node-134 * <ok> node-135 * <ok>  
+size: 3
+90, content:inconsistent nodesets node-63 0x1fffffbbc <ok> node-34 0x1fffffffc <ok> node-33 0x1fffffffc <ok> node-43 0x1fffffbbc <ok> node-38 0x1fffffbbc <ok> node-56 0x1fffffbbc <ok> node-61 0x1fffffbbc <ok> node-60 0x1fffffbbc <ok> node-55 0x1fffffbbc <ok> node-53 0x1fffffbbc <ok> node-42 0x1fffffbbc <ok> node-46 0x1fffffbbc <ok> node-54 0x1fffffbbc <ok> node-36 0x1fffffbbc <ok> node-57 0x1fffffbbc <ok> node-58 0x1fffffbbc <ok> node-49 0x1fffffbbc <ok> node-59 0x1fffffbbc <ok> node-48 0x1fffffbbc <ok> node-51 0x1fffffbbc <ok> node-39 0x1fffffbbc <ok> node-50 0x1fffffbbc <ok> node-47 0x1fffffbbc <ok> node-45 0x1fffffbbc <ok> node-40 0x1fffffbbc <ok> node-35 0x1fffffbbc <ok> node-62 0x1fffffbbc <ok> node-52 0x1fffffbbc <ok> node-44 0x1fffffbbc <ok>  
+size: 1
+4inconsistent nodesets node-193 0x4001fdfe <ok> node-194 0x4001fdfe <ok> node-198 0x4001fdfe <ok> node-197 0x4001fdfe <ok> node-199 0x4001fdfe <ok> node-195 0x4001fdfe <ok> node-196 0x4001fdfe <ok> node-192 0x4001fdfe <ok> node-201 0x41fffdfe <ok> node-221 0x41fffdfe <ok> node-207 0x41fffdfe <ok> node-203 0x41fffdfe <ok> node-204 0x41fffdfe <ok>  
+size: 1
+3inconsistent nodesets * <ok> * 0x1001fdfe <ok> * 0x1001fdfe <ok> * 0x1001fdfe <ok> * 0x1001fdfe <ok> * 0x1001fdfe <ok> * 0x1001fdfe <ok> * 0x1001fdfe <ok> * <ok> * <ok> * 0x11fffdfe <ok> * 0x11fffdfe <ok> * 0x11fffdfe <ok>  
+size: 3
+1inconsistent nodesets node-224 0x1001fdfe <ok> node-226 0x0001e1fe <ok> node-227 0x0001fdfe <ok> node-230 0x0001fdfe <ok>  
+size: 1
+2inconsistent nodesets * 0x000001fe <ok> * <ok> * 0x1001fdfe <ok> * 0x1001fdfe <ok> * 0x1001fdfe <ok> * 0x1001fdfe <ok> * 0x1001fdfe <ok> * 0x1001fdfe <ok>  
+size: 4
+inconsistent nodesets * 0x0000000e <ok> * 0x00000002 <ok>  
+size: 2
+9inconsistent nodesets node-2 0x1fffffffe <ok> node-7 0x4001fdfe <ok> node-27 0x1fffffffe <ok> node-15 0x400ffdfe <ok> node-31 0x1fffffffe <ok> node-14 0x400ffdfe <ok> node-29 0x401ffdfe <ok> node-25 0x1fffffffe <ok> node-0 0x0001e1fe <ok> node-5 0x1fffffffe <ok> node-22 0x1fffffffe <ok> node-20 0x5ffffffe <ok> node-11 0x41fffdfe <ok> node-16 0x5ffffdfe <ok> node-19 0x7ffffffe <ok> node-21 0x7ffffffe <ok> node-18 0x7ffffffe <ok> node-17 0x5ffffdfe <ok> node-1 0x4001fdfe <ok> node-3 0x0001fdfe <ok> node-4 0x1fffffffe <ok> node-6 0x1fffffffe <ok> node-24 0xfffffffe <ok> node-8 0x1fffffffe <ok> node-9 0x41fffdfe <ok> node-26 0x1fffffffe <ok> node-13 0x401ffdfe <ok> node-28 0x1fffffffe <ok> node-12 0x41fffdfe <ok> node-23 0x1fffffffe <ok> node-10 0x40fffdfe <ok> node-30 0x1fffffffe <ok>  
+size: 1
+1inconsistent nodesets node-0 * <ok> node-2 * <ok> node-1 * <ok> node-7 * <ok> node-6 * <ok>  
+size: 2
+1inconsistent nodesets * <ok> * 0x1fffffffe <ok> node-161 * <ok> * <ok> * <ok>  
+size: 3
+1inconsistent nodesets node-1 0x1fffffffc <ok> node-0 0x1fffffffe <ok> node-2 0x1fffffffc <ok> node-19 0x1fffffffe <ok> node-31 0x1fffffffc <ok>  
+size: 1
+7inconsistent nodesets * <ok> * 0x1fffffffe <ok> * 0x1fffffffe <ok> * 0x1fffffffe <ok> * 0x1fffffffe <ok> * 0x1fffffffe <ok> * 0x1fffffffe <ok> * 0x1fffffffe <ok> * 0x1fffffffe <ok> * 0x1fffffffe <ok> * 0x1fffffffe <ok> * 0x1fffffffe <ok> * 0x1fffffffe <ok> * 0x1fffffffe <ok> * 0x1fffffffe <ok> * 0x1fffffffe <ok> * 0x1fffffffe <ok> * 0x1fffffffe <ok> * 0x1fffffffe <ok> * 0x1fffffffe <ok> * 0x1fffffffe <ok> * 0x1fffffffe <ok> * 0x1fffffffe <ok> * 0x1fffffffe <ok> * 0x1fffffffe * <ok>  
+size: 6
+1inconsistent nodesets * 0x1fffffffe <ok> * <ok> * <ok> * <ok> * 0x01fffffe <ok>  
+size: 2
+27, content:inconsistent nodesets * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe * <ok> * <ok>  
+size: 18
+2inconsistent nodesets node-225 0x000000be <ok> node-224 0x000000be <ok> node-226 0x000000be <ok> node-227 0x000000be <ok> node-230 0x000001be <ok> node-228 0x000001be <ok> node-231 0x000001be <ok>  
+size: 1
+2inconsistent nodesets * node-97 * <ok> node-98 * <ok> node-99 * <ok> node-103 0x0021fdfe <ok> node-102 * 0x0021fdfe <ok> * 0x0021fdfe <ok>  
+size: 2
+1inconsistent nodesets node-127 0x1fffffffe <ok> node-96 * <ok> node-97 * <ok>  
+size: 5
+1inconsistent nodesets * 0x1fffffffe <ok> * 0x01fffffe <ok> * 0x01fffffe <ok> * 0x01fffffe <ok>  
+size: 2
+1inconsistent nodesets node-162 0x000001fe <ok> node-161 0x000001fe <ok> node-160 0x0001fdfe <ok>  
+size: 1
+1inconsistent nodesets * 0x1fffffffe <ok> * 0x0000000e <ok> * <ok> * 0x0000000e <ok>  
+size: 19
+1inconsistent nodesets * <ok> * 0x0000000e <ok> * 0x0000000e <ok> * <ok>  
+size: 13
+2inconsistent nodesets * 0x000001fe <ok> * 0x000001fe <ok> * <ok> * <ok> * <ok> * 0x1001fdfe <ok> * 0x1001fdfe <ok> * 0x1001fdfe <ok>  
+size: 8
+2inconsistent nodesets * 0x000001fe <ok> * 0x000001fe <ok> * <ok> * <ok> * <ok> * 0x0401fdfe <ok> * 0x0401fdfe <ok> * 0x0401fdfe <ok>  
+size: 5
+1inconsistent nodesets node-223 0x1fffffffe <ok> * <ok> node-194 * <ok> * <ok>  
+size: 3
+10, content:inconsistent nodesets node-159 * 0x1fffffffe * <ok> * <ok>  
+size: 3
+10, content:inconsistent nodesets node-31 0x1fffffffe <ok> node-0 * 0x0000000e <ok>  
+size: 8
+5inconsistent nodesets node-235 0x01fffffe <ok> node-246 0x01fffffe <ok> node-237 0x01fffffe <ok> node-234 0x01fffffe <ok> node-231 0x0001e1fe <ok> node-228 0x000001fe <ok> node-233 0x0081fdfe <ok> node-230 0x000001fe <ok> node-226 0x0001fdfe <ok> node-236 0x01fffffe <ok> node-239 0x0081fdfe <ok> node-224 0x000001fe <ok> node-238 0x01fffffe <ok> node-229 0x000001fe <ok> node-225 0x000001fe <ok> node-227 0x0001e1fe <ok>  
+size: 1
+inconsistent nodesets * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe * <ok> * 0x0001e1fe <ok> * 0x0001e1fe * <ok>  
+size: 5
+unknown 
+size: 55
+inconsistent nodesets node-128 0x000001fe <ok> node-129 0x1001fdfe <ok>  
+size: 1
+1inconsistent nodesets node-224 * <ok> node-255 * <ok> node-226 * <ok> node-225 * <ok>  
+size: 3
+1inconsistent nodesets node-32 * <ok> node-63 * <ok> node-33 * <ok> node-34 * <ok>  
+size: 4
+1inconsistent nodesets node-0 * 0x1fffffffe <ok> node-1 * <ok> node-2 * <ok>  
+size: 2
+2inconsistent nodesets node-0 * <ok> * 0x0001e1fe <ok> * <ok> * <ok> * 0x2001fdfe <ok> * 0x2001fdfe <ok> * 0x2001fdfe <ok>  
+size: 2
+1inconsistent nodesets node-95 * 0x1fffffffe <ok> node-66 * <ok> * <ok>  
+size: 3
+2inconsistent nodesets * 0x000001fe <ok> * 0x000001fe <ok> * <ok> * <ok> * 0x4001fdfe <ok> * 0x4001fdfe <ok> * 0x4001fdfe <ok> * 0x4001fdfe <ok>  
+size: 3
+2inconsistent nodesets node-193 0x000001fe <ok> node-192 0x000001fe <ok> node-194 * <ok> * <ok> node-198 * <ok> * <ok> node-196 * <ok>  
+size: 2
+5inconsistent nodesets node-128 0x2001fdfe <ok> node-131 0x2001fdfe <ok> node-129 0x2001fdfe <ok> node-130 0x2001fdfe <ok> node-133 0x2001fdfe <ok> node-134 0x2001fdfe <ok> node-132 0x2001fdfe <ok> node-135 0x2001fdfe <ok> node-143 0x21fffdfe <ok> node-141 0x21fffdfe <ok> node-137 0x21fffdfe <ok> node-138 0x21fffdfe <ok> node-140 0x21fffdfe <ok> node-156 0x21fffdfe <ok> node-139 0x21fffdfe <ok> node-142 0x21fffdfe <ok>  
+size: 1
+2inconsistent nodesets * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe <ok> * <ok> * <ok> * <ok>  
+size: 12
+1inconsistent nodesets * 0x000001fe <ok> * 0x0801fdfe <ok> * 0x0801fdfe <ok> * 0x0801fdfe <ok>  
+size: 2
+1inconsistent nodesets node-64 0x000001fe <ok> node-67 0x000001fe <ok> * <ok> * <ok>  
+size: 3
+1inconsistent nodesets * 0x000001fe <ok> * 0x000001fe * <ok> * 0x0001e1fe <ok> * 0x0001e1fe <ok>  
+size: 4
+27, content:inconsistent nodesets node-65 0x2001fdfe <ok> node-69 0x2001fdfe <ok> node-66 0x2001fdfe <ok> node-68 0x2001fdfe <ok> node-70 0x2001fdfe <ok> node-71 0x2001fdfe <ok> node-67 0x2001fdfe <ok> node-77 0x23fdfdfe <ok>  
+size: 1
+1inconsistent nodesets node-128 0x000001fe * <ok> node-129 * <ok> * <ok> node-133 * <ok> node-135 * <ok>  
+size: 2
+1inconsistent nodesets node-98 0x1fffffffe <ok> node-97 0x1fffffffe <ok> node-96 0x1fffffffe <ok> node-103 0x1fbfffffe <ok> node-127 0x1fffffffe <ok>  
+size: 1
+2inconsistent nodesets node-33 0x000001dc <ok> node-34 0x000001dc <ok> node-37 0x000001dc <ok> node-38 0x000001dc <ok> node-35 0x000001dc <ok> node-39 0x000001dc <ok> node-45 0x0003fddc <ok>  
+size: 1
+inconsistent nodesets node-231 0x0000077a <ok> node-224 0x0000f77a <ok>  
+size: 1
+30, content:inconsistent nodesets node-39 0x1fffffffe <ok> node-33 0x1fffffffe <ok> node-34 0x1fffffffe <ok> node-32 0x1fffffffe <ok> node-36 0x1fffffffe <ok> node-35 0x1fffffffe <ok> node-38 0x1fffffffe <ok> node-37 0x1fffffffe <ok> node-45 0x0403fdfe <ok>  
+size: 1
+inconsistent nodesets node-39 0x1fffffffe <ok> node-45 0x0403fdfe <ok>  
+size: 1
+1inconsistent nodesets * node-31 0x1fffffffe * <ok> node-2 * <ok> node-1 * <ok>  
+size: 3
+1inconsistent nodesets node-224 0x000001fe <ok> node-225 0x0001e1fe <ok> node-226 0x0001e1fe <ok> node-227 0x0001e1fe <ok>  
+size: 1
+1inconsistent nodesets node-255 0x1fffffffe <ok> node-226 0x1fdfffffc <ok> node-225 0x1fdfffffc <ok>  
+size: 1
+1inconsistent nodesets * 0x000001fe <ok> * 0x0201fdfe <ok> * 0x0201fdfe <ok> * 0x0201fdfe <ok> * 0x0201fdfe <ok>  
+size: 3
+2inconsistent nodesets * 0x000001fe <ok> * 0x000001fe * <ok> * <ok> * 0x0001fdfe <ok> * 0x0001fdfe <ok> * 0x0001fdfe * <ok>  
+size: 3
+2inconsistent nodesets node-193 0x1fffffffe <ok> node-192 0x1fffffffe <ok> node-195 0x080007f6 <ok> node-198 0x0801fff6 <ok> node-197 0x0801fff6 <ok> node-199 0x0801fff6 <ok>  
+size: 1
+7inconsistent nodesets * <ok> * <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * <ok> * <ok>  
+size: 14
+1inconsistent nodesets node-31 0x1fffffffe <ok> * <ok> node-0 * <ok> node-2 * <ok> * <ok>  
+size: 4
+9inconsistent nodesets node-191 0x1ffffff7c <ok> node-162 0x1ffffff7c <ok> node-161 0x1ffffff7c <ok> node-175 0x1ffffff7c <ok> node-170 0x1ffffff7c <ok> node-180 0x1ffffff7c <ok> node-177 0x1ffffff7c <ok> node-164 0x1ffffff7c <ok> node-185 0x1ffffff7c <ok> node-189 0x1ffffff7c <ok> node-169 0x1ffffff7c <ok> node-173 0x1ffffff7c <ok> node-178 0x1ffffff7c <ok> node-174 0x1ffffff7c <ok> node-181 0x1ffffff7c <ok> node-179 0x1ffffff7c <ok> node-165 0x1ffffff7c <ok> node-167 0x1ffffff7c <ok> node-176 0x1ffffff7c <ok> node-171 0x1ffffff7c <ok> node-184 0x1ffffff7c <ok> node-183 0x1ffffff7c <ok> node-172 0x1ffffff7c <ok> node-182 0x1ffffff7c <ok> node-187 0x1ffffff7c <ok> node-186 0x1ffffff7c <ok> node-168 0x1ffffff7c <ok> node-188 0x1ffffff7c <ok> node-163 0x1ffffff7c <ok> node-190 0x1ffffff7c <ok> node-160 0x1fffffffe <ok>  
+size: 1
+1inconsistent nodesets * node-191 0x1fffffffe <ok> node-162 * <ok> node-161 * <ok>  
+size: 2
+4inconsistent nodesets node-1 0x000001fc <ok> node-2 0x000001fc <ok> node-7 0x000001fc <ok> node-4 0x000001fc <ok> node-6 0x000001fc <ok> node-5 0x000001fc <ok> node-3 0x000001fc <ok> node-14 0x0003fdfc <ok> node-13 0x0003fdfc <ok> node-12 0x0003fdfc <ok> node-10 0x0003fdfc <ok> node-16 0x0003fdfc <ok> node-15 0x0003fdfc <ok>  
+size: 1
+1inconsistent nodesets node-0 0x000001fe <ok> node-3 0x000001fe <ok> node-1 0x0001e1fe <ok>  
+size: 1
+4inconsistent nodesets * 0x1fffffffe <ok> * 0x1fffffffe <ok> * 0x1fffffffe <ok> * 0x1fffffffe <ok> * 0x1fffffffe * <ok> * 0x1fffffffe <ok> * 0x1fffffffe * <ok> * 0x1fffffffe <ok> * 0x1fffffffe * <ok> * 0x1fffffffe <ok> * 0x1fffffffe <ok> * <ok>  
+size: 3
+1inconsistent nodesets node-31 0x1fffffffe <ok> node-0 * <ok> node-1 * <ok> node-2 * <ok>  
+size: 5
+inconsistent nodesets node-31 0x1fffffffc <ok> node-2 0x0000dffc <ok>  
+size: 1
+inconsistent nodesets node-8 0x0000dffc <ok> node-9 0x1fffffffe <ok>  
+size: 1
+1inconsistent nodesets node-255 0x1fffffffe * <ok> node-224 * <ok> node-226 * <ok> node-225 * <ok>  
+size: 4
+27, content:inconsistent nodesets * <ok> * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe * <ok>  
+size: 8
+2inconsistent nodesets node-0 * <ok> node-2 * <ok> node-1 * <ok> * <ok> node-9 * <ok> node-8 * <ok> node-10 * <ok>  
+size: 2
+9inconsistent nodesets node-255 0x1ffbffffc <ok> node-226 0x1ffbffffc <ok> node-225 0x1ffbffffc <ok> node-253 0x1ffbffffc <ok> node-250 0x1ffbffffc <ok> node-241 0x1ffbffffc <ok> node-249 0x1ffbffffc <ok> node-242 0x1ffbffffc <ok> node-233 0x1ffbffffc <ok> node-237 0x1ffbffffc <ok> node-236 0x1ffbffffc <ok> node-243 0x1ffbffffc <ok> node-254 0x1ffbffffc <ok> node-247 0x1ffbffffc <ok> node-248 0x1ffbffffc <ok> node-232 0x1ffbffffc <ok> node-227 0x1ffbffffc <ok> node-252 0x1ffbffffc <ok> node-235 0x1ffbffffc <ok> node-229 0x1ffbffffc <ok> node-228 0x1ffbffffc <ok> node-240 0x1ffbffffc <ok> node-231 0x1ffbffffc <ok> node-246 0x1ffbffffc <ok> node-244 0x1ffbffffc <ok> node-230 0x1ffbffffc <ok> node-251 0x1ffbffffc <ok> node-234 0x1ffbffffc <ok> node-239 0x1ffbffffc <ok> node-238 0x1ffbffffc <ok> node-224 0x1fffffffe <ok>  
+size: 1
+1inconsistent nodesets node-255 0x1fffffffe <ok> node-226 0x1ffbffffc <ok> node-225 0x1ffbffffc <ok>  
+size: 1
+2inconsistent nodesets * 0x000001fe * <ok> * 0x0401fdfe <ok> * <ok> * <ok> * 0x0401fdfe <ok> * 0x0401fdfe <ok> * 0x0401fdfe <ok>  
+size: 2
+2inconsistent nodesets node-96 * <ok> node-97 0x0801fdde <ok> node-98 0x0801fdde <ok> node-103 0x0801fdde <ok> node-99 0x0801fdde <ok> node-102 0x0801fdde <ok> node-101 0x0801fdde * <ok>  
+size: 2
+1inconsistent nodesets node-2 * <ok> node-1 * <ok> node-0 * <ok>  
+size: 2
+1inconsistent nodesets * 0x1fffffffe * <ok> * 0xfffffffe <ok> * 0xfffffffe <ok> * 0xfffffffe <ok>  
+size: 3
+9inconsistent nodesets node-63 0x1fffffffa <ok> node-34 0x1fffffffa <ok> node-40 0x1fffffffa <ok> node-39 0x1fffffffa <ok> node-35 0x1fffffffa <ok> node-38 0x1fffffffa <ok> node-36 0x1fffffffa <ok> node-37 0x1fffffffa <ok> node-54 0x1fffffffa <ok> node-59 0x1fffffffa <ok> node-48 0x1fffffffa <ok> node-51 0x1fffffffa <ok> node-47 0x1fffffffa <ok> node-60 0x1fffffffa <ok> node-56 0x1fffffffa <ok> node-61 0x1fffffffa <ok> node-57 0x1fffffffa <ok> node-55 0x1fffffffa <ok> node-46 0x1fffffffa <ok> node-44 0x1fffffffa <ok> node-52 0x1fffffffa <ok> node-43 0x1fffffffa <ok> node-42 0x1fffffffa <ok> node-50 0x1fffffffa <ok> node-58 0x1fffffffa <ok> node-62 0x1fffffffa <ok> node-49 0x1fffffffa <ok> node-45 0x1fffffffa <ok> node-41 0x1fffffffa <ok> node-53 0x1fffffffa <ok> node-32 0x1fffffffa <ok> node-33 0x1fffffffe <ok>  
+size: 1
+inconsistent nodesets node-191 0x1fffffffe <ok> node-162 0x1ffffdffc <ok> node-161 0x1ffffdffc <ok> node-185 0x1ffffdffc <ok> node-168 0x1ffffdffc <ok> node-170 0x1ffffdffc <ok> node-173 0x1ffffdffc <ok> node-181 0x1ffffdffc <ok> node-183 0x1ffffdffc <ok> node-169 0x1ffffdffc <ok> node-182 0x1ffffdffc <ok> node-184 0x1ffffdffc <ok> node-163 0x1ffffdffc <ok> node-180 0x1ffffdffc <ok> node-167 0x1ffffdffc <ok> node-177 0x1ffffdffc <ok> node-171 0x1ffffdffc <ok> node-164 0x1ffffdffc <ok> node-176 0x1ffffdffc <ok> node-178 0x1ffffdffc <ok> node-165 0x1ffffdffc <ok> node-175 0x1ffffdffc <ok> node-174 0x1ffffdffc <ok> node-166 0x1ffffdffc <ok>  
+size: 1
+
+inconsistent nodesets node-191 0x1fffffffe * <ok> node-162 * <ok> node-161 * <ok>  
+size: 2
+
+inconsistent nodesets node-255 * <ok> * 0x0000000e <ok> * <ok> node-226 0x0000000e <ok>  
+size: 3
+
+inconsistent nodesets node-96 0x000001fe <ok> node-100 0x000001fe * <ok> node-98 * <ok> node-97 * <ok>  
+size: 2
+1inconsistent nodesets node-224 0x0001e1ee <ok> node-225 0x0001fdee <ok> node-226 0x0801fdee <ok> node-231 0x0001fdee <ok> node-229 0x0001fdee <ok>  
+size: 1
+
+inconsistent nodesets * 0x0801fdfe <ok> * 0x0801fdfe <ok> * 0x0801fdfe <ok> * 0x0801fdfe <ok> * 0x0801fdfe <ok> * 0x0801fdfe <ok> * 0x0801fdfe <ok> * 0x09fffdfe <ok> * 0x09fffdfe <ok> * 0x09fffdfe <ok> * 0x09fffdfe <ok> * 0x09fffdfe <ok> * 0x09fffdfe <ok> * 0x09fffdfe <ok>  
+size: 3
+
+inconsistent nodesets * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe <ok> * <ok> * 0x000001fe * <ok>  
+size: 9
+
+inconsistent nodesets * <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc * <ok>  
+size: 13
+
+inconsistent nodesets * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe * <ok> * <ok> * <ok> * <ok> * <ok> * <ok>  
+size: 6
+
+inconsistent nodesets * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe <ok> * <ok> * <ok> * 0x1001fdfe <ok>  
+size: 4
+
+inconsistent nodesets node-255 * <ok> node-224 * <ok> node-225 * <ok> node-226 * <ok>  
+size: 4
+
+inconsistent nodesets node-192 * <ok> node-223 * <ok> node-194 * <ok> node-193 * <ok>  
+size: 4
+
+inconsistent nodesets * 0x1fffffffe <ok> * 0x000001fe <ok>  
+size: 2
+
+inconsistent nodesets node-58 0x1fffffffc <ok> node-59 0x1fffffffe <ok> node-61 0x1fffffffe <ok> node-63 0x1fffffffe <ok> node-60 0x1fffffffe <ok> node-62 0x1fffffffe <ok> node-32 0x1fffffffe <ok>  
+size: 1
+
+inconsistent nodesets node-39 0x09fffdfe <ok> node-32 0x000001fe <ok> node-44 0x0801fdfe <ok> node-46 0x0803fdfe <ok>  
+size: 1
+
+inconsistent nodesets node-1 0x0001fdfe <ok> node-0 0x000001fe <ok> node-2 0x0001fdfe <ok> node-7 0x000001fe <ok> node-4 0x000001fe <ok> node-6 0x000001fe <ok>  
+size: 1
+
+inconsistent nodesets node-127 0x1fffffffc <ok> node-98 0x1fffffffe <ok> node-97 0x1fffffffe <ok> node-96 0x1fffffffe <ok> node-106 0x1fffffffe <ok> node-101 0x1fffffffe <ok> node-113 0x1fffffffe <ok> node-102 0x1fffffffe <ok> node-100 0x1fffffffe <ok> node-103 0x1fffffffe <ok> node-111 0x1fffffffe <ok> node-99 0x1fffffffe <ok> node-105 0x1fffffffe <ok> node-121 0x1fffffffe <ok> node-108 0x1fffffffe <ok> node-107 0x1fffffffe <ok> node-109 0x1fffffffe <ok> node-104 0x1fffffffe <ok> node-114 0x1fffffffe <ok>  
+size: 1
+
+inconsistent nodesets * node-128 * <ok> node-129 * <ok> node-130 * <ok>  
+size: 3
+
+inconsistent nodesets * node-162 * <ok> node-161 * <ok> * <ok> node-166 0x0801fdfe <ok> * 0x0801fdfe <ok> node-165 0x0801fdfe <ok> node-163 0x0801fdfe <ok>  
+size: 2
+
+inconsistent nodesets node-224 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe <ok> node-231 * <ok> * <ok> * <ok> node-228 * <ok> * <ok>  
+size: 2
+
+inconsistent nodesets * 0x1fffffffe <ok> * 0xfffffffe <ok> * 0xfffffffe <ok> * 0xfffffffe <ok> * 0xfffffffe <ok>  
+size: 4
+
+inconsistent nodesets * 0x0000007e <ok> * 0x0000003e <ok>  
+size: 3
+
+inconsistent nodesets node-32 0x000001fe <ok> node-35 0x0000007e <ok> node-36 0x000000fe <ok> node-34 0x000001fe <ok>  
+size: 1
+
+inconsistent nodesets node-192 0x000000fe <ok> node-196 0x0000003e <ok> node-195 0x000000fe <ok>  
+size: 1
+
+inconsistent nodesets node-96 0x00000002 <ok> node-100 0x0000007e <ok>  
+size: 1
+
+inconsistent nodesets * 0x1fffffffe <ok> * 0x0000000e <ok> * 0x0000000e <ok>  
+size: 4
+
+inconsistent nodesets * 0x0000000e <ok> * <ok> * 0x0000000e <ok>  
+size: 4
+
+inconsistent nodesets node-162 0x0000000e <ok> node-161 0x0000000e <ok> node-160 * <ok>  
+size: 2
+
+inconsistent nodesets node-2 0x0000017e <ok> node-1 0x0000017e <ok> node-0 0x0000017e <ok> node-4 0x0001617e <ok> node-3 0x0001617e <ok> node-7 0x0001617e <ok> node-5 0x00016d7e <ok>  
+size: 1
+
+inconsistent nodesets * node-97 0x000001fe <ok> * 0x000001fe <ok> node-96 * <ok> node-102 * <ok> node-99 * <ok>  
+size: 3
+
+inconsistent nodesets * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe * <ok> * <ok> * <ok> * <ok> * <ok> * <ok> * <ok>  
+size: 3
+2inconsistent nodesets * node-194 0x000001fe <ok> node-193 * 0x000001fe <ok> node-195 * <ok> node-198 * <ok> node-196 * <ok> node-197 * <ok>  
+size: 2
+
+inconsistent nodesets * node-194 0x000001fe <ok> node-192 * <ok>  
+size: 2
+
+inconsistent nodesets node-255 0x1ffffbffc <ok> node-226 0x1ffffbffc <ok> node-225 0x1ffffbffc <ok> node-230 0x1ffffbffc <ok> node-243 0x1ffffbffc <ok> node-228 0x1ffffbffc <ok> node-231 0x1ffffbffc <ok> node-235 0x1ffffbffc <ok> node-246 0x1ffffbffc <ok> node-249 0x1ffffbffc <ok> node-252 0x1ffffbffc <ok> node-248 0x1ffffbffc <ok> node-232 0x1ffffbffc <ok> node-245 0x1ffffbffc <ok> node-254 0x1ffffbffc <ok> node-238 0x1ffffbffc <ok> node-242 0x1ffffbffc <ok> node-244 0x1ffffbffc <ok> node-236 0x1ffffbffc <ok> node-250 0x1ffffbffc <ok> node-233 0x1ffffbffc <ok> node-247 0x1ffffbffc <ok> node-239 0x1ffffbffc <ok> node-240 0x1ffffbffc <ok> node-253 0x1ffffbffc <ok> node-241 0x1ffffbffc <ok> node-227 0x1ffffbffc <ok> node-229 0x1ffffbffc <ok> node-251 0x1ffffbffc <ok> node-234 0x1ffffbffc <ok> node-224 0x1ffffbffe <ok>  
+size: 1
+
+inconsistent nodesets * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe * <ok> * 0x0001e1fe <ok> * 0x0001e1fe <ok> * 0x0001e1fe <ok>  
+size: 2
+
+inconsistent nodesets * 0x000001fe <ok> * 0x000001fe * <ok> * <ok> * 0x0801fdfe <ok> * 0x0801fdfe <ok> * 0x0801fdfe <ok> * 0x0801fdfe <ok>  
+size: 4
+
+inconsistent nodesets node-11 0x05e1fdfe <ok> node-15 0x0401fdfe <ok> node-17 0x07f7fdfe <ok> node-19 0x07f7fdfe <ok> node-10 0x05e1fdfe <ok> node-5 0x0001e1fe <ok> node-7 0x0001e1fe <ok> node-0 0x1fffffffe <ok> node-16 0x07f7fdfe <ok> node-20 0x07f7fdfe <ok> node-4 0x000001fe <ok> node-9 0x0401fdfe <ok> node-12 0x0401fdfe <ok> node-31 0x1fff7fffe <ok> node-6 0x000001fe <ok> node-30 0x1fff7fffe <ok> node-22 0x07f7fdfe <ok> node-28 0x1fff7fffe <ok> node-3 0x000001fe <ok> node-29 0x1fff7fffe <ok> node-25 0x0401fdfe <ok> node-14 0x0401fdfe <ok> node-18 0x1fffffffe <ok> node-27 0x1fff7fffe <ok> node-8 0x1fff7fffe <ok> node-26 0x1fff7fffe <ok> node-2 0x000001fe <ok> node-1 0x000001fe <ok> node-21 0x07f7fdfe <ok> node-24 0x1fff7fffe <ok> node-13 0x0401fdfe <ok> node-23 0x07f7fdfe <ok>  
+size: 1
+
+inconsistent nodesets * 0x1fffffffe <ok> * 0x1fffffffe <ok> * 0x0401fdfe <ok> * 0x05fffdfe <ok> * 0x05fffdfe <ok> * <ok> * 0x0401fdfe <ok> * 0x0001fdfe <ok> * 0x0401fdfe <ok> * 0x1fffffffe <ok> * <ok> * 0x05fffdfe <ok> * 0x1fffffffe <ok> * 0x1fffffffe <ok> * 0x1fffffffe <ok> * 0x1fffffffe <ok> * 0x1fffffffe <ok> * <ok> * 0x1fffffffe <ok> * 0x000001fe <ok> * <ok> * 0x1fffffffe <ok> * <ok> * 0x1fffffffe * <ok> * 0x1fffffffe <ok> * 0x1fffffffe <ok> * 0x05fffdfe <ok>  
+size: 2
+
+inconsistent nodesets node-74 0x09fffdfe <ok> node-79 0x09fffdfe <ok> node-77 0x09fffdfe <ok> node-80 0xfffffffe <ok> node-90 0x09fffdfe <ok> node-75 0x09fffdfe <ok> node-72 0x1fffffffe <ok> node-91 0x1fffffffe <ok> node-92 0x1fffffffe <ok> node-95 0x1fffffffe <ok> node-69 0x0801fdfe <ok> node-71 0x0801fdfe <ok> node-68 0x0801fdfe <ok> node-89 0x1fffffffe <ok> node-88 0x1fffffffe <ok> node-70 0x0801fdfe <ok> node-76 0x080ffdfe <ok> node-78 0x080ffdfe <ok> node-82 0x1ffffffe <ok> node-94 0x1fffffffe <ok> node-93 0x1fffffffe <ok> node-73 0x0801fdfe <ok> node-83 0xfffffffe <ok> node-64 0x1fffffffe <ok> node-87 0xfffffffe <ok> node-86 0xfffffffe <ok> node-85 0xfffffffe <ok> node-84 0xfffffffe <ok> node-81 0xfffffffe <ok> node-66 0x000001fe <ok> node-65 0x000001fe <ok> node-67 0x000001fe <ok>  
+size: 1
+
+inconsistent nodesets * <ok> * 0x05fffdfe <ok> * 0x05fffdfe <ok> * 0x05fffdfe <ok> * 0x1fffffffe <ok> * 0x05fffdfe <ok> * 0x05fffdfe <ok> * 0x1fffffffe <ok> * <ok> * <ok> * <ok> * <ok> * <ok> * <ok> * <ok> * 0x1fffffffe <ok> * 0x0401fdfe * <ok> * <ok> * 0x1fffffffe <ok> * 0x1fffffffe <ok> * 0x1fffffffe <ok> * 0x1fffffffe <ok> * 0x1fffffffe <ok> * 0x1fffffffe <ok> * 0x1fffffffe <ok> * 0x000001fe * <ok> * 0x1fffffffe <ok> * <ok> * <ok> * <ok>  
+size: 2
+
+inconsistent nodesets node-219 0x1fffffffe <ok> node-201 0x03fffdfe <ok> node-206 0x03fffdfe <ok> node-216 0x03fffdfe <ok> node-205 0x021ffdfe <ok> node-204 0x0201fdfe <ok> node-194 0x1fffffffe <ok> node-213 0x1fffffffe <ok> node-214 0x1fffffffe <ok> node-215 0x1fffffffe <ok> node-223 0x1fffffffe <ok> node-207 0x0207fdfe <ok> node-211 0x1fffffffe <ok> node-209 0x1fffffffe <ok> node-198 0x000001fe <ok> node-208 0xfffffffe <ok> node-192 0x000001fe <ok> node-212 0x1fffffffe <ok> node-222 0x1fffffffe <ok> node-203 0x03fffdfe <ok> node-199 0x000001fe <ok> node-195 0x000001fe <ok> node-221 0x1fffffffe <ok> node-217 0x1fffffffe <ok> node-210 0x1ffffffe <ok> node-196 0x000001fe <ok> node-193 0x000001fe <ok> node-197 0x000001fe <ok> node-220 0x1fffffffe <ok> node-218 0x1fffffffe <ok> node-200 0x1fffffffe <ok> node-202 0x021ffdfe <ok>  
+size: 1
+
+inconsistent nodesets node-236 0x081ff9fe <ok> node-239 0x081ff9fe <ok> node-241 0x1ffdffbfe <ok> node-242 0x1ffdffbfe <ok> node-248 0x1ffdffbfe <ok> node-245 0xffdffbfe <ok> node-247 0x1ffdffbfe <ok> node-253 0x1ffdffffe <ok> node-227 0x0801f9fe <ok> node-254 0x1ffdffffe <ok> node-240 0x0fdff9fe <ok> node-246 0x3fdffbfe <ok> node-233 0x1fffffffe <ok> node-243 0x1ffdffbfe <ok> node-228 0x0801f9fe <ok> node-229 0x0801f9fe <ok> node-231 0x0801f9fe <ok> node-249 0x1ffdffbfe <ok> node-230 0x0801f9fe <ok> node-251 0x1ffdffffe <ok> node-235 0x0bdff9fe <ok> node-224 0x000001fe <ok> node-252 0x1ffdffffe <ok> node-232 0x1ffdffffe <ok> node-255 0x1ffdffffe <ok> node-250 0x0bdff9fe <ok> node-234 0x09dff9fe <ok> node-238 0x09dff9fe <ok> node-237 0x09dff9fe <ok> node-225 0x0801f9fe <ok> node-226 0x0801f9fe <ok> node-244 0x1fffffbfe <ok>  
+size: 1
+inconsistent nodesets node-223 0x1fffffffe <ok> node-210 0x1ffffffe <ok>  
+size: 1
+
+inconsistent nodesets node-95 0x1fffffffe <ok> node-73 0x0801fdfe <ok> node-87 0xfffffffe <ok> node-86 0xfffffffe <ok> node-70 0x0801fdfe <ok> node-85 0xfffffffe <ok> node-84 0xfffffffe <ok> node-69 0x1fffffffe <ok> node-83 0x1fffffffe <ok>  
+size: 1
+
+inconsistent nodesets node-161 0x000001fe <ok> node-160 0x000001fe <ok> node-163 0x0401fdfe <ok> node-165 0x0401fdfe <ok>  
+size: 1
+
+inconsistent nodesets * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe <ok> * 0x0401fdfe <ok> * <ok> * <ok>  
+size: 2
+
+inconsistent nodesets * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe <ok> * <ok> * 0x000001fe <ok> * 0x000001fe * <ok>  
+size: 7
+
+inconsistent nodesets node-32 0x08001fee <ok> node-33 0x08001fee <ok> node-34 0x08001fee <ok> node-36 0x08000fee <ok>  
+size: 1
+
+inconsistent nodesets node-32 0x00000006 <ok> node-33 0x00000006 <ok> node-35 0x100007f6 <ok> node-38 0x100007f6 <ok> node-37 0x100007f6 <ok> node-36 0x100007f6 <ok> node-39 0x100007f6 <ok>  
+size: 1
+
+inconsistent nodesets node-31 0x1fffffffe <ok> node-0 0xfffffffe <ok> node-1 0xfffffffe <ok> node-2 0xfffffffe <ok> node-30 0xfffffffe <ok>  
+size: 2
+
+inconsistent nodesets * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe <ok> node-199 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe <ok> node-192 0x000001fe <ok> * <ok> * <ok> node-203 * <ok> node-202 * <ok> node-206 * <ok>  
+size: 2
+
+inconsistent nodesets node-193 * <ok> node-197 0x000001fe <ok> node-195 0x000001fe <ok> node-198 * <ok> node-192 0x000001fe <ok> node-196 0x000001fe <ok> node-199 0x000001fe <ok>  
+size: 2
+
+inconsistent nodesets * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe <ok> * <ok> * <ok> * <ok> * <ok> * <ok> * <ok> * <ok> * <ok>  
+size: 3
+
+inconsistent nodesets node-167 0x000001aa <ok> node-160 0x000001aa <ok> node-166 0x1001fdaa <ok> node-164 0x1001fdaa <ok> node-162 0x1001fdaa <ok>  
+size: 1
+
+inconsistent nodesets node-34 0x0001fdfe <ok> node-32 0x000001fe <ok> node-33 0x000001fe <ok>  
+size: 1
+
+inconsistent nodesets node-160 0x000001aa <ok> node-162 0x1001fdaa <ok> node-161 0x1fffffffe <ok>  
+size: 1
+
+inconsistent nodesets node-194 0x0000000e <ok> node-193 0x0000000e <ok> node-192 0x000001fe <ok>  
+size: 1
+
+inconsistent nodesets node-225 0x0000000e <ok> node-224 0x0000000e <ok> node-226 0x0000000e <ok> node-231 0x04000fee <ok> node-228 0x04000fee <ok>  
+size: 1
+
+inconsistent nodesets * 0x000001fe <ok> * 0x000001fe * <ok> * <ok> * 0x0401fdfe <ok> * 0x0401fdfe <ok> * 0x0401fdfe <ok> * 0x0401fdfe <ok>  
+size: 3
+
+inconsistent nodesets * 0x000001fe <ok> * 0x000001fe * <ok> * 0x0801fdfe <ok> * 0x0801fdfe <ok> * 0x0801fdfe <ok> * 0x0801fdfe <ok> * 0x0801fdfe <ok>  
+size: 6
+
+inconsistent nodesets * 0x000001fe <ok> * 0x000001fe <ok> node-0 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe <ok> node-2 0x000001fe <ok> node-5 0x000001fe <ok> * <ok> node-14 * <ok> node-13 * <ok> * <ok>  
+size: 2
+
+inconsistent nodesets node-171 0x1fffffffe <ok> node-187 0x1fffffffe <ok> node-169 0x1fffffffe <ok> node-191 0x1fffffffe <ok> node-170 0x1fffffffe <ok> node-190 0x1fffffffe <ok> node-166 0x000001fe <ok>  
+size: 1
+inconsistent nodesets * 0x1fffffffe <ok> * 0x1fffffffe <ok> * <ok>  
+size: 2
+inconsistent nodesets node-243 0x1ffffffe <ok> node-251 0x1fffffffe <ok>  
+size: 1
+inconsistent nodesets node-151 0x1fffffffe <ok> node-135 0x0801fdfe <ok>  
+size: 1
+
+nconsistent nodesets * 0x000001fe <ok> * 0x1fffffffe <ok>  
+size: 2
+
+inconsistent nodesets node-223 0x1f07ffffe <ok> node-192 0x1fffffffe <ok> node-193 0x1fffffffe <ok> node-194 0x1fffffffe <ok>  
+size: 1
+
+inconsistent nodesets node-223 * <ok> node-192 * <ok> node-194 * <ok> node-193 * <ok>  
+size: 3
+
+inconsistent nodesets node-127 * <ok> node-96 * <ok> node-97 * <ok> node-98 * <ok>  
+size: 2
+
+inconsistent nodesets * <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * 0x1fffffffc <ok> * <ok>  
+size: 6
+
+inconsistent nodesets * 0x1fffffffe <ok> * 0x0000000e <ok> * 0x0000000e <ok> * 0x0000000e <ok>  
+size: 5
+
+inconsistent nodesets node-98 0x0000000e <ok> node-97 0x0000000e <ok> node-96 0x00000002 <ok>  
+size: 1
+
+inconsistent nodesets node-128 0x05fffdfe <ok> node-129 0x0401fdfe <ok> node-132 0x0401fdfe <ok> node-133 0x0401fdfe <ok> node-135 0x0401fdfe <ok> node-131 0x0401fdfe <ok> node-134 0x0401fdfe <ok> node-130 0x0401fdfe <ok> node-141 0x0401fdfe <ok> node-137 0x05fffdfe <ok> node-140 0x05fffdfe <ok> node-143 0x05fffdfe <ok> node-142 0x05fffdfe <ok> node-138 0x05fffdfe <ok> node-139 0x05fffdfe <ok>  
+size: 1
+
+inconsistent nodesets node-255 0x1fffffffe <ok> node-254 0x1fffffffe <ok> node-224 0x0000000e <ok>  
+size: 1
+
+inconsistent nodesets node-160 0x0001e1fe <ok> node-163 0x0201fdfe <ok> node-162 0x0201fdfe <ok> node-161 0x0201fdfe <ok> node-164 0x0201fdfe <ok> node-165 0x0201fdfe <ok> node-166 0x0201fdfe <ok> node-167 0x0201fdfe <ok>  
+size: 1
+
+inconsistent nodesets node-95 0x1fffffffe <ok> node-64 0xfffffffe <ok> * 0xfffffffe <ok> * 0xfffffffe <ok> node-94 0xfffffffe <ok>  
+size: 3
+
+inconsistent nodesets * 0xfffffffe <ok> * 0x1fffffffe <ok> * 0xfffffffe <ok> * 0xfffffffe <ok> * 0xfffffffe <ok>  
+size: 3
+
+inconsistent nodesets * node-24 0x1fffffffe <ok> node-29 0x1fffffffe <ok> node-26 0x1fffffffe <ok> node-27 0x1fffffffe <ok> node-28 0x1fffffffe <ok> node-25 0x1fffffffe <ok> node-23 0x1fffffffe <ok> node-21 0x1fffffffe <ok> node-30 0x1fffffffe <ok> node-22 0x1fffffffe <ok> node-20 0x1fffffffe <ok> node-19 0xfffffffe <ok> * 0xfffffffe <ok> * 0xfffffffe <ok> node-1 0xfffffffe <ok>  
+size: 2
+
+inconsistent nodesets * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe <ok> * 0x000001fe * <ok> * <ok> * <ok> * <ok>  
+size: 3
+
+inconsistent nodesets node-96 * <ok> * 0x000001fe <ok> * 0x000001fe <ok> node-103 0x000001fe <ok> node-99 0x000001fe <ok> * 0x000001fe <ok> node-98 0x000001fe <ok>  
+size: 2
+
+inconsistent nodesets node-194 0x000001fe <ok> node-192 0x000001fe <ok> * 0x0801fdfe <ok> node-196 0x0801fdfe <ok> node-193 0x0801fdfe <ok>  
+size: 2
+
+inconsistent nodesets node-131 0x0000017e <ok> node-128 0x0000017e <ok> node-129 0x0801fd7e <ok> node-130 0x0801fd7e <ok> node-135 0x0801fd7e <ok> node-132 0x0801fd7e <ok> node-133 0x0801fd7e <ok>  
+size: 1
+
+inconsistent nodesets * 0x0000000e <ok> * 0x1fffffffe <ok> * 0x0000000e <ok> * 0x0000000e <ok>  
+size: 4
+
+inconsistent nodesets node-0 0x0000000e <ok> node-31 0x1fffffffe <ok> node-2 0x0000000e <ok> node-1 0x0000000e <ok>  
+size: 1
+
+inconsistent nodesets * 0x09fffdfe <ok> * <ok> * 0x0801fdfe <ok> * 0x0801fdfe <ok> * 0x0801fdfe <ok> * <ok> * 0x0801fdfe <ok> * 0x0801fdfe <ok> * 0x09fffdfe <ok>  
+size: 2
+
+inconsistent nodesets node-1 * <ok> node-0 * <ok> node-2 0x000001fe <ok> node-3 0x000001fe <ok> node-4 0x000001fe <ok> node-6 0x000001fe <ok> node-5 
+0x000001fe <ok> node-7 0x000001fe <ok>  
+size: 2
+
+inconsistent nodesets node-192 * <ok> node-194 0x000001fe <ok>  
+size: 2
+
+inconsistent nodesets node-67 0x000001fe <ok> node-64 0x000001fe <ok> node-65 0x1001fdfe <ok> node-71 0x1001fdfe <ok>  
+size: 1
+
+inconsistent nodesets node-128 0x000001fa <ok> node-130 0x000001fa <ok> node-131 0x0001fdfa <ok> node-133 0x1001fdfa <ok> node-132 0x1001fdfa <ok> node-134 0x1001fdfa <ok>  
+size: 1
+
+inconsistent nodesets node-159 0x1fffffffe <ok> node-128 * <ok> node-130 * <ok>  
+size: 2
+
+inconsistent nodesets node-223 0x1fffffffe <ok> node-194 0x0400000e <ok> node-192 0x0400000e <ok> node-193 0x0400000e <ok>  
+size: 1
+
+inconsistent nodesets node-95 0x1fffffffe <ok> node-64 0x0000000e <ok> node-66 0x0000000e <ok> node-65 0x0000000e <ok>  
+size: 1
+
+27, content:inconsistent nodesets node-2 0x000001fe <ok> node-1 0x000001fe <ok> node-0 0x000001fe <ok> node-7 0x0001e1fe <ok> node-3 0x0001e1fe <ok> node-6 0x0001e1fe <ok> node-5 0x0001e1fe <ok> node-4 0x0001e1fe <ok>  
+size: 1
+
+
+number of lines processed: 433490
+number of LCSs generated: 341
+total line ids in lcs: 433490
