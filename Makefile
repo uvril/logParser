@@ -26,13 +26,13 @@ Utils.o: Utils.cpp Utils.h
 	${CXX} ${CFLAGS} -c Utils.cpp -o Utils.o -I ${BOOST_DIR}/include 
 
 lcs.o: lcs.cpp lcs.h
-	${CXX} ${CFLAGS} -c lcs.cpp -o lcs.o -lboost_system -L ./ -ljson
+	${CXX} ${CFLAGS} -c lcs.cpp -o lcs.o -lboost_system -L ./libjson -ljson
 
 logTrie.o: logTrie.cpp logTrie.h
 	${CXX} ${CFLAGS} -c logTrie.cpp -o logTrie.o
 
 main: main.cpp ${OBJECTS}
-	${CXX} ${CFLAGS} main.cpp -o main ${OBJECTS} ${BOOST_LIBS} -L ./ -ljson
+	${CXX} ${CFLAGS} main.cpp -o main ${OBJECTS} ${BOOST_LIBS} -L ./libjson -ljson
 
 test: main
 	./main
