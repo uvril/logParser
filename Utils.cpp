@@ -54,7 +54,7 @@ void Utils::readFile(string &fileName, vector<string> &retLogs) {
 	    }
 	    fileName = tmpFN;
 	}
-	cout<<"final log file name: "<<fileName<<endl;
+	//cout<<"final log file name: "<<fileName<<endl;
 	ifstream logFile(fileName);
 	if (logFile.is_open()) {
 		while (getline(logFile, line)) {
@@ -69,7 +69,7 @@ void Utils::readFile(string &fileName, vector<string> &retLogs) {
 	else {
 		cout<<"CANNOT open file: "+fileName<<endl;
 	}
-	cout<<"log entry count in total: "<<retLogs.size()<<endl;
+	//cout<<"log entry count in total: "<<retLogs.size()<<endl;
 	return;
 }
 
@@ -207,14 +207,21 @@ void Utils::dealloc2dIntArray(int m, int** &array) {
 	array = NULL;
 }
 
-void Utils::dumpVecStr(vector<string> &inVec) {
-//	printf("size: %d, content:", inVec.size());
+//this function is add to return string of vec!!!
+string Utils::VectoString(vector<string> &inVec) {
+	string s = "";
 	for (uint i=0; i<inVec.size(); i++) {
-		cout<<inVec[i]<<" ";
+		s = s + inVec[i] + " ";
+	}
+	return s;
+}
+
+void Utils::dumpVecStr(vector<string> &inVec) {
+	for (uint i=0; i<inVec.size(); i++) {
+		cout << inVec[i] << " ";
 	}
 	cout<<endl;
 }
-
 /*
 template <typename A, typename F>
 void Utils::dumpVec(vector<T, A> &inVec) {

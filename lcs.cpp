@@ -89,14 +89,13 @@ void LCSParser::getLCS(string &oriLog, int logType, int prec) {
 	m_preCheckMethod = prec;
 	clock_t prefixt=clock();
 	if (m_nLines>0 && m_nLines  == 172) {
-		printf("debug");
+//		printf("debug");
 //		splitLCSMap();
 //		mergeLCSMap();
 	}
 	vector<string> logTokens;
 	if (!Utils::preProcessLog(oriLog, logTokens, logType))
 		return;
-
 	m_logTokens.push_back(logTokens); // now just for split purpose
 #ifdef PRINT_LCS
 		printf("new log: \n");
@@ -1481,25 +1480,22 @@ int LCSParser::LCSLen(vector<string> &l1, vector<string> &l2, int** &lens) {
 
 
 void LCSParser::dumpLCSMap() {
-	m_nLCSs = 0;
-	int total=0;
+	JSONNode root(JSON_NODE);
+	int cnt = 0;
 	for (auto it = m_LCSMap.begin(); it != m_LCSMap.end(); it++) {
-		m_nLCSs++;
-		cout << "message: ";
-		Utils::dumpVecStr(it->lcsTokens);
-		total += it->lineIds.size();
-		cout << "size: "<<it->lineIds.size()<<endl << "lineIds: ";
 		for (uint i=0; i<it->lineIds.size(); i++)
-			cout<<it->lineIds[i]<<" ";
-		cout<<endl;
-		cout << "param positions: ";
-//		for (uint i=0; i<it->paramPos.size(); i++)
-//			cout<<it->paramPos[i]<<" ";
-		cout<<endl;
+		{
+			JSONNode child(JSON_NODE);
+			child.set_name(to_string(it->lineIds[i]));
+			child.push_back(JSONNode("key", Utils::VectoString(it->lcsTokens)));
+			child.push_back(JSONNode("originalTokens", Utils::VectoString(m_logTokens[it->lineIds[i]])));
+			child.push_back(JSONNode("keyNo", cnt));
+			root.push_back(child);
+		} 
+		cnt++;
 	}
-	cout<<"number of lines processed: "<<m_nLines<<endl;
-	cout<<"number of LCSs generated: "<<m_nLCSs<<endl;
-	cout<<"total line ids in lcs: "<<total<<endl;
+	string jc = root.write();
+	cout << jc << std::endl;
 }
 
 void LCSParser::dumpLCSMapSum() {
@@ -1551,9 +1547,9 @@ void LCSParser::runLCS(vector<string> &oriLogs, int logType, int prec) {
 		else it++;
 	}
 
-	printf("dump final lcs map:\n");
+	//printf("dump final lcs map:\n");
 	dumpLCSMap();
-	dumpLCSMapSum();
+	//dumpLCSMapSum();
 }
 
 /*

@@ -77,6 +77,7 @@ public:
 	static int getHashValOfVecStr(vector<string> &inVec);
 
 	static void dumpVecStr(vector<string> &inVec);
+	static string VectoString(vector<string> &inVec);
 	static void dumpVecInt(vector<int> &inVec);
 	static void dumpSetInt(set<int> &inVec);
 

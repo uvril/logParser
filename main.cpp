@@ -77,9 +77,9 @@ int main(int argc, char* argv[]) {
 			prec = hashed;
 	}
 
-	cout<<"method: "<<type<<endl;
+	/*cout<<"method: "<<type<<endl;
 	cout<<"fileName: "<<fileName<<endl;
-	cout<<"log type: "<<logType<<endl;
+	cout<<"log type: "<<logType<<endl;*/
 	vector<string> oriLogs;
 	Utils::readFile(fileName, oriLogs);
 

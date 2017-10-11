@@ -23,16 +23,16 @@ MurmurHash3.o: MurmurHash3.cpp MurmurHash3.h
 	${CXX} ${CFLAGS} -c MurmurHash3.cpp -o MurmurHash3.o
 
 Utils.o: Utils.cpp Utils.h
-	${CXX} ${CFLAGS} -c Utils.cpp -o Utils.o -I ${BOOST_DIR}/include #-L ${BOOST_DIR}/lib ${BOOST_LIBS} 
+	${CXX} ${CFLAGS} -c Utils.cpp -o Utils.o -I ${BOOST_DIR}/include 
 
 lcs.o: lcs.cpp lcs.h
-	${CXX} ${CFLAGS} -c lcs.cpp -o lcs.o -lboost_system
+	${CXX} ${CFLAGS} -c lcs.cpp -o lcs.o -lboost_system -L ./ -ljson
 
 logTrie.o: logTrie.cpp logTrie.h
 	${CXX} ${CFLAGS} -c logTrie.cpp -o logTrie.o
 
 main: main.cpp ${OBJECTS}
-	${CXX} ${CFLAGS} main.cpp -o main ${OBJECTS} ${BOOST_LIBS} 
+	${CXX} ${CFLAGS} main.cpp -o main ${OBJECTS} ${BOOST_LIBS} -L ./ -ljson
 
 test: main
 	./main
