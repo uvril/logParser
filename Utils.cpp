@@ -89,7 +89,7 @@ void Utils::rmSchemas(const string &line, string &retLine, int nIgnored) {
 	retLine = boost::algorithm::join(logTokens, " ");
 }
 
-bool Utils::preHPCLogs(string &line, vector<string> &logTokens, int nIGNORED) {
+bool Utils::preHPCLogs(string &line, vector<string> &logTokens, int nIGNORED, string &logTimeStamp) {
 //	const int nIGNORED = 6;
 //	cout<<line<<endl;
 
@@ -104,13 +104,21 @@ bool Utils::preHPCLogs(string &line, vector<string> &logTokens, int nIGNORED) {
 
 	// remove schemas, iterate way. faster than boost way
 	uint i = 0, cnt=0;
+	string ordinalNumber = "";
+	for (; i<line.size(); i++) {
+		if (line[i]==',') cnt++;
+		if (cnt >= 0 && cnt<1) ordinalNumber += line[i];
+		if (cnt >=5) break;
+		if (cnt>=4) logTimeStamp += line[i];
+	} 
+	logTimeStamp.erase(0, 1);
+	logTimeStamp += "||"+ ordinalNumber;
 	for (; i<line.size(); i++) {
 		if (line[i]==',') cnt++;
 		if (cnt>=nIGNORED) break;
 	}
 	line.erase(0, i+1);
 //	cout<<line<<endl;
-
 	boost::split(logTokens, line, boost::is_any_of("\t =")/*,boost::token_compress_on*/);
 	return true;
 //	dumpVecStr(logTokens);
@@ -129,13 +137,13 @@ void Utils::preSysLogs(const string &line, vector<string> &logTokens) {
 		logTokens.erase(logTokens.begin(), logTokens.begin()+6);
 }
 
-bool Utils::preProcessLog(string &line, vector<string> &logTokens, int logType) {
+bool Utils::preProcessLog(string &line, vector<string> &logTokens, int logType, string &logTimeStamp) {
 	if (logType==0)
-		return preHPCLogs(line, logTokens, 6);
+		return preHPCLogs(line, logTokens, 6, logTimeStamp);
 	else if (logType==1)
-		return preBglLogs(line, logTokens, 0);
+		return preBglLogs(line, logTokens, 0, logTimeStamp);
 	else if (logType==2)
-		return preOpenstackLogs(line, logTokens, 0);
+		return preOpenstackLogs(line, logTokens, 0, logTimeStamp);
 	else if (logType==3)
 		return preSparkLogs(line, logTokens, 2);
 	else
@@ -143,7 +151,7 @@ bool Utils::preProcessLog(string &line, vector<string> &logTokens, int logType) 
 	return false;
 }
 
-bool Utils::preBglLogs(string &line, vector<string> &logTokens, int nIgnored) {
+bool Utils::preBglLogs(string &line, vector<string> &logTokens, int nIgnored, string &logTimeStamp) {
 	boost::split(logTokens, line, boost::is_any_of("\t ="));
 	const string myints[]= {"INFO", "FATAL", "ERROR", "WARNING", "SEVERE", "FAILURE"};
 	std::set<string> LOGLEVEL (myints,myints+6);
@@ -157,6 +165,7 @@ bool Utils::preBglLogs(string &line, vector<string> &logTokens, int nIgnored) {
 //		printf("WARNING! Failed to find log level\n");
 		return false;
 	}
+	logTimeStamp = logTokens[4];
 	logTokens.erase(logTokens.begin(), logTokens.begin()+i+1);
 	return true;
 
@@ -164,7 +173,7 @@ bool Utils::preBglLogs(string &line, vector<string> &logTokens, int nIgnored) {
 //	getTokens(retLog, logTokens);
 }
 
-bool Utils::preOpenstackLogs(string &line, vector<string> &logTokens, int nIgnored) {
+bool Utils::preOpenstackLogs(string &line, vector<string> &logTokens, int nIgnored, string &logTimeStamp) {
 	boost::split(logTokens, line, boost::is_any_of("\t "));
 	const string myints[]= {"DEBUG", "INFO", "AUDIT", "WARNING", "ERROR", "CRITICAL", "TRACE"};
 	std::set<string> LOGLEVEL (myints,myints+6);
@@ -178,6 +187,7 @@ bool Utils::preOpenstackLogs(string &line, vector<string> &logTokens, int nIgnor
 //		printf("WARNING! Failed to find log level\n");
 		return false;
 	}
+	logTimeStamp = logTokens[0] + "||" + logTokens[1];
 	logTokens.erase(logTokens.begin(), logTokens.begin()+i+1);
 	return true;
 //	rmSchemas(line, retLog, nIgnored);

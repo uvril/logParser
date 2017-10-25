@@ -120,6 +120,7 @@ private:
 	// store all parsed LCSs happened so far. key "LCS" format: "file * completed at time *", use "*" as a wild card.
 	vector<LCSObject> m_LCSMap;
 	vector<vector<string>> m_logTokens;
+	vector<string> m_logTimeStamp;
 	// number of lines processed so far.
 	uint m_nLines;
 	uint m_nLCSs;

@@ -60,15 +60,15 @@ public:
 
 	static void preSysLogs(const string &line, vector<string> &logTokens);
 
-	static bool preHPCLogs(string &line, vector<string> &logTokens, int nIgnored);
+	static bool preHPCLogs(string &line, vector<string> &logTokens, int nIgnored, string &logTimeStamp);
 
 	static bool preSparkLogs(string &line, vector<string> &logTokens, int nIGNORED);
 
-	static bool preBglLogs(string &line, vector<string> &logTokens, int nIgnored);
+	static bool preBglLogs(string &line, vector<string> &logTokens, int nIgnored, string &logTimeStamp);
 
-	static bool preOpenstackLogs(string &line, vector<string> &logTokens, int nIgnored);
+	static bool preOpenstackLogs(string &line, vector<string> &logTokens, int nIgnored, string &logTimeStamp);
 
-	static bool preProcessLog(string &line, vector<string> &logTokens, int logType);
+	static bool preProcessLog(string &line, vector<string> &logTokens, int logType, string &logTimeStamp);
 
 	static void alloc2dIntArray(int m, int n, int** &array);
 

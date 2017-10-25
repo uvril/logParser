@@ -47,9 +47,11 @@ void IPLoM::parByTokenCnt(vector<string> &oriLogs, int logType) {
 		string &oriLog = oriLogs[i];
 //		string logStmt;
 		vector<string> logTokens;
-		if (!Utils::preProcessLog(oriLog, logTokens, logType))
+		string logTimeStamp;
+		if (!Utils::preProcessLog(oriLog, logTokens, logType, logTimeStamp))
 			continue;
 		m_oriLogs.push_back(logTokens);
+		m_logTimeStamp.push_back(logTimeStamp);
 		m_preTime += clock()-preT;
 		int sz = logTokens.size();
 		if (sz>=m_logTokens.size())

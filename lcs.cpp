@@ -94,9 +94,11 @@ void LCSParser::getLCS(string &oriLog, int logType, int prec) {
 //		mergeLCSMap();
 	}
 	vector<string> logTokens;
-	if (!Utils::preProcessLog(oriLog, logTokens, logType))
+	string logTimeStamp;
+	if (!Utils::preProcessLog(oriLog, logTokens, logType, logTimeStamp))
 		return;
 	m_logTokens.push_back(logTokens); // now just for split purpose
+	m_logTimeStamp.push_back(logTimeStamp);
 #ifdef PRINT_LCS
 		printf("new log: \n");
 		Utils::dumpVecStr(logTokens);
@@ -1482,11 +1484,15 @@ int LCSParser::LCSLen(vector<string> &l1, vector<string> &l2, int** &lens) {
 void LCSParser::dumpLCSMap() {
 	JSONNode root(JSON_NODE);
 	int cnt = 0;
+	/*for (auto i = m_logTimeStamp.begin(); i != m_logTimeStamp.end(); ++i) {
+		cout << *i << endl;
+	}*/
 	for (auto it = m_LCSMap.begin(); it != m_LCSMap.end(); it++) {
+		//Utils::dumpVecStr(it->lcsTokens);
 		for (uint i=0; i<it->lineIds.size(); i++)
 		{
 			JSONNode child(JSON_NODE);
-			child.set_name(to_string(it->lineIds[i]));
+			child.set_name(m_logTimeStamp[it->lineIds[i]]);
 			child.push_back(JSONNode("key", Utils::VectoString(it->lcsTokens)));
 			child.push_back(JSONNode("originalTokens", Utils::VectoString(m_logTokens[it->lineIds[i]])));
 			child.push_back(JSONNode("keyNo", cnt));
@@ -1494,7 +1500,7 @@ void LCSParser::dumpLCSMap() {
 		} 
 		cnt++;
 	}
-	string jc = root.write();
+	string jc = root.write_formatted();
 	cout << jc << std::endl;
 }
 

@@ -1,5 +1,5 @@
 CXX=g++
-CFLAGS = -std=c++11 -o0 #-Wall
+CFLAGS = -std=c++11 -o0 -g
 OBJECTS = Clustering.o IPLoM.o Test.o MurmurHash3.o Utils.o lcs.o logTrie.o
 
 # Change this to wherever you have boost installed

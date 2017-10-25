@@ -32,11 +32,13 @@ void Clustering::runClustering(vector<string> &oriLogs, int logType) {
 //	vector<string> tmp;
 //	string logStmt;
 	vector<string> logTokens;
+	string logTimeStamp;
 	for (uint i=0; i<oriLogs.size(); i++) {
-		if (!Utils::preProcessLog(oriLogs[i], logTokens, logType))
+		if (!Utils::preProcessLog(oriLogs[i], logTokens, logType, logTimeStamp))
 			continue;
 		Utils::getTokens(oriLogs[i], logTokens);
 		m_rks.push_back(logTokens);
+		m_logTimeStamp.push_back(logTimeStamp);
 	}
 	const clock_t begin_time = clock();
 

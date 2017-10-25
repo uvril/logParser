@@ -35,6 +35,7 @@ private:
 	int m_nLogs; // # of logs to be processed
 
 	vector<vector<string>> m_oriLogs; // store original logs
+	vector<string> m_logTimeStamp;
 	// results after step 1: group log tokens by token count (# of words in a log stmt)
 	vector<vector<int>> m_logTokens; // clusters of log ids in m_oriLogs
 	unordered_map<string, vector<int>> m_finalPars; // log_key : ids in m_oriLogs of this partition

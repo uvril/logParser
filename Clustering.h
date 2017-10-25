@@ -49,6 +49,7 @@ private:
 	unordered_map<string, vector<int>> m_finalClusters;
 	unordered_map<string, double> m_distMap;
 	vector<vector<string>> m_rks; // raw log tokens splited from raw log lines
+	vector<string> m_logTimeStamp;
 	// WED(rk1, rk2) = \sum_{i=1}^{EO}{\frac{1}{1+e^{x_i-v}}},
 	// EO is # of ops changing from rk1 to rk2.
 	// x_i is the index of the word operated by the i_th operation.
