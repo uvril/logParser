@@ -1,0 +1,3 @@
+./main run_lcs_basic ./data/openstack/logs/cloudlab0506/cloudlab0506_all openstack prefix
+./main run_lcs_basic ./data/bgl/bgl2 bgl prefix
+./main run_lcs_basic ./data/LAUR060803MX20NODES0TO255EVENTS.csv losAlmos prefix
