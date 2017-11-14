@@ -116,7 +116,7 @@ void LCSParser::getLCS(string &oriLog, int logType, int prec) {
 		m_prefixT += clock()-tmp;
 		if (idInLCSMap>=0) { // found a match
 			m_LCSMap[idInLCSMap].lineIds.push_back(m_nLines);
-
+			m_LCSList[m_nLines] = idInLCSMap;
 			m_nLines++;
 			m_prefixTime += clock()-prefixt;
 			return;
@@ -170,6 +170,8 @@ void LCSParser::getLCS(string &oriLog, int logType, int prec) {
 //	vector<int **> ptsLens;
 	int **ptCanLen=NULL;
 	clock_t lcsLenTime = clock();
+	int canCnt = 0;
+	int cnt = 0;
 	for (auto it = m_LCSMap.begin(); it != m_LCSMap.end(); it++) {
 		vector<string> &lcsToken = it->lcsTokens;
 #ifdef PRINT_LCS
@@ -187,6 +189,7 @@ void LCSParser::getLCS(string &oriLog, int logType, int prec) {
 			lenCanLCS = len;
 			lcsLen = lcsToken.size();
 			canIt = it;
+			canCnt = cnt;
 			if (ptCanLen != NULL)
 				Utils::dealloc2dIntArray(logTokens.size()+1, ptCanLen);
 			ptCanLen = lens;
@@ -194,6 +197,7 @@ void LCSParser::getLCS(string &oriLog, int logType, int prec) {
 		else {
 			Utils::dealloc2dIntArray(logTokens.size()+1, lens);
 		}
+		cnt ++;
 	}
 	m_lcsLenTime += clock() - lcsLenTime;
 	clock_t lcsTime = clock();
@@ -219,9 +223,9 @@ void LCSParser::getLCS(string &oriLog, int logType, int prec) {
 		}
 		if (m_preCheckMethod==prefix)	// new log as lcs, simply add into trie
 			m_trie.addLCS(m_LCSMap[idInLCS].lcsTokens, idInLCS);
-		else if (m_preCheckMethod==invertedList) {
+		else if (m_preCheckMethod==invertedList)
 			addToInvertedList(m_LCSMap[idInLCS].lcsTokens, idInLCS);
-		}
+		m_LCSList[m_nLines] = idInLCS;
 	}
 	else {
 		// get LCS of logStmt and it->first
@@ -242,6 +246,7 @@ void LCSParser::getLCS(string &oriLog, int logType, int prec) {
 		Utils::dumpVecStr(newLCS);
 #endif
 		adjustLCSMap(canIt, newLCS);
+		m_LCSList[m_nLines] = canCnt;
 	}
 	m_lcsStrTime += clock()-lcsTime;
 	m_nLines++;
@@ -260,7 +265,7 @@ void LCSParser::adjustLCSMap(vector<LCSObject>::iterator &oldLCSIt,
 	}
 	oldLCSIt->nStars = nStars;
 	oldLCSIt->lcsTokens = newLCSTokens;
-	oldLCSIt->lineIds.push_back(m_nLines);
+	oldLCSIt->lineIds.push_back(m_nLines);	
 	int newLCSId = oldLCSIt-m_LCSMap.begin();
 	if (add2LCS(newLCSId)) { // because duplicate, newLCSId changed, no need to add newLCSTokens into logTrie for it already exists
 		// modify trie todo: what's wierd is: put it here is too times slower than @line205, though only one line parsed wrong: line 2786561
@@ -406,7 +411,8 @@ int LCSParser::preHashCheckLCS(vector<string> &logTk, int lineId) {
 		}
 	}
 	if ((maxLCSLen>=(tkSz/2+1)) || (tkSz%2==0 && maxLCSLen>=tkSz/2)) {
-		m_LCSMap[maxMapId].lineIds.push_back(lineId);
+		m_LCSMap[maxMapId].lineIds.push_back(lineId);	
+		m_LCSList[lineId] = maxMapId;
 		return 1;
 	}
 	return -1;
@@ -530,6 +536,7 @@ int LCSParser::preInvertedList(vector<string> &logTk, int lineId) {
 	}
 	if (maxLen>0 && ((maxLen>=(tkSz/2+1)) || (tkSz%2==0 && maxLen>=tkSz/2))) {
 		m_LCSMap[maxId].lineIds.push_back(lineId);
+		m_LCSList[lineId] = maxId;
 		ret = maxId;
 	}
 
@@ -589,6 +596,7 @@ int LCSParser::preInvertedList(vector<string> &logTk, int lineId) {
 	}
 	if (maxLen>0 && ((maxLen>=(tkSz/2+1)) || (tkSz%2==0 && maxLen>=tkSz/2))) {
 		m_LCSMap[maxId].lineIds.push_back(lineId);
+		m_LCSList[lineId] = maxId;
 		ret = maxId;
 	}
 	m_ilQueryTime += clock() - timeBegin;
@@ -723,6 +731,7 @@ int LCSParser::preHashCheckLCS1(vector<string> &logTk, int lineId) {
 	}
 	if ((maxLCSLen>=(tkSz/2+1)) || (tkSz%2==0 && maxLCSLen>=tkSz/2)) {
 		m_LCSMap[maxMapId].lineIds.push_back(lineId);
+		m_LCSList[lineId] = maxMapId;
 		return 1;
 	}
 	return -1;
@@ -787,6 +796,7 @@ int LCSParser::preCheckLCS(vector<string> &logTk, int lineId) {
 //	if (maxCommonLCS >= (int)ceil((double)logTk.size()/2)) { // two times slower than above one
 	if ((maxCommonLCS>=(tkSz/2+1)) || (tkSz%2==0 && maxCommonLCS>=tkSz/2)) {
 		m_LCSMap[maxId].lineIds.push_back(lineId);
+		m_LCSList[lineId] = maxId;
 		ret = 1;
 	}
 	m_loopQueryTime += clock() - timeBegin;
@@ -1482,13 +1492,13 @@ int LCSParser::LCSLen(vector<string> &l1, vector<string> &l2, int** &lens) {
 
 
 void LCSParser::dumpLCSMap() {
-	JSONNode root(JSON_NODE);
+	/*JSONNode *root = new JSONNode(JSON_NODE);
 	int cnt = 0;
-	/*for (auto i = m_logTimeStamp.begin(); i != m_logTimeStamp.end(); ++i) {
-		cout << *i << endl;
-	}*/
+	cout << m_LCSMap.size() << endl;
 	for (auto it = m_LCSMap.begin(); it != m_LCSMap.end(); it++) {
-		//Utils::dumpVecStr(it->lcsTokens);
+		//Utils::dumpVelcslistcStr(it->lcsTokens);
+		//cout << "it size" << it->lineIds.size() << endl;
+		//cout << "map size" << root->size() << endl;
 		for (uint i=0; i<it->lineIds.size(); i++)
 		{
 			JSONNode child(JSON_NODE);
@@ -1496,12 +1506,19 @@ void LCSParser::dumpLCSMap() {
 			child.push_back(JSONNode("key", Utils::VectoString(it->lcsTokens)));
 			child.push_back(JSONNode("originalTokens", Utils::VectoString(m_logTokens[it->lineIds[i]])));
 			child.push_back(JSONNode("keyNo", cnt));
-			root.push_back(child);
+			string flag = "false";
+			if (m_LCSList[it->lineIds[i]].keyno != cnt) flag = "true";
+			child.push_back(JSONNode("isSame", flag));
+			//child.push_back(JSONNode("keyno", m_LCSList[it->lineIds[i]].keyno));
+			//child.push_back(JSONNode("method", m_LCSList[it->lineIds[i]].method));
+			//child.push_back(JSONNode("lineid", m_LCSList[it->lineIds[i]].lineId));
+			//child.push_back(JSONNode("lcsmaplineid", it->lineIds[i]));
+			root->push_back(child);
 		} 
 		cnt++;
 	}
-	string jc = root.write_formatted();
-	cout << jc << std::endl;
+	cout << root->write_formatted() << std::endl;
+	delete root;*/
 }
 
 void LCSParser::dumpLCSMapSum() {
@@ -1539,6 +1556,13 @@ void LCSParser::runLCS(vector<string> &oriLogs, int logType, int prec) {
 		cout<<i<<": "<<oriLogs[i]<<endl;
 #endif
 		getLCS(oriLogs[i], logType, prec);
+		JSONNode array(JSON_ARRAY);
+		JSONNode items(JSON_NODE);
+		items.push_back(JSONNode("keyNo", m_LCSList[i]));
+		items.push_back(JSONNode("timeStamp", m_logTimeStamp[i]));
+		items.push_back(JSONNode("oriTokens", Utils::VectoString(m_logTokens[i])));
+		array.push_back(items);
+		cout << array.write_formatted() << std::endl;
 	}
 	m_totalTime += clock()-totalTime;
 	if (m_bSplit)
@@ -1554,7 +1578,7 @@ void LCSParser::runLCS(vector<string> &oriLogs, int logType, int prec) {
 	}
 
 	//printf("dump final lcs map:\n");
-	dumpLCSMap();
+	//dumpLCSMap();
 	//dumpLCSMapSum();
 }
 

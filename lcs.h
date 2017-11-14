@@ -119,6 +119,7 @@ private:
 	unordered_set<string> m_params;
 	// store all parsed LCSs happened so far. key "LCS" format: "file * completed at time *", use "*" as a wild card.
 	vector<LCSObject> m_LCSMap;
+	map<int, int> m_LCSList;
 	vector<vector<string>> m_logTokens;
 	vector<string> m_logTimeStamp;
 	// number of lines processed so far.
