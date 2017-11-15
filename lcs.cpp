@@ -1492,33 +1492,17 @@ int LCSParser::LCSLen(vector<string> &l1, vector<string> &l2, int** &lens) {
 
 
 void LCSParser::dumpLCSMap() {
-	/*JSONNode *root = new JSONNode(JSON_NODE);
+	JSONNode array(JSON_ARRAY);
 	int cnt = 0;
 	cout << m_LCSMap.size() << endl;
 	for (auto it = m_LCSMap.begin(); it != m_LCSMap.end(); it++) {
-		//Utils::dumpVelcslistcStr(it->lcsTokens);
-		//cout << "it size" << it->lineIds.size() << endl;
-		//cout << "map size" << root->size() << endl;
-		for (uint i=0; i<it->lineIds.size(); i++)
-		{
-			JSONNode child(JSON_NODE);
-			child.set_name(m_logTimeStamp[it->lineIds[i]]);
-			child.push_back(JSONNode("key", Utils::VectoString(it->lcsTokens)));
-			child.push_back(JSONNode("originalTokens", Utils::VectoString(m_logTokens[it->lineIds[i]])));
-			child.push_back(JSONNode("keyNo", cnt));
-			string flag = "false";
-			if (m_LCSList[it->lineIds[i]].keyno != cnt) flag = "true";
-			child.push_back(JSONNode("isSame", flag));
-			//child.push_back(JSONNode("keyno", m_LCSList[it->lineIds[i]].keyno));
-			//child.push_back(JSONNode("method", m_LCSList[it->lineIds[i]].method));
-			//child.push_back(JSONNode("lineid", m_LCSList[it->lineIds[i]].lineId));
-			//child.push_back(JSONNode("lcsmaplineid", it->lineIds[i]));
-			root->push_back(child);
-		} 
+		JSONNode child(JSON_NODE);
+		child.push_back(JSONNode("keyNo", cnt));
+		child.push_back(JSONNode("lcsTokens", Utils::VectoString(it->lcsTokens)));
+		array.push_back(child);
 		cnt++;
 	}
-	cout << root->write_formatted() << std::endl;
-	delete root;*/
+	cout << array.write_formatted() << std::endl;
 }
 
 void LCSParser::dumpLCSMapSum() {
@@ -1578,7 +1562,7 @@ void LCSParser::runLCS(vector<string> &oriLogs, int logType, int prec) {
 	}
 
 	//printf("dump final lcs map:\n");
-	//dumpLCSMap();
+	dumpLCSMap();
 	//dumpLCSMapSum();
 }
 
