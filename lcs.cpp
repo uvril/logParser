@@ -1550,20 +1550,20 @@ void LCSParser::dumpLCSMapSum() {
 
 void LCSParser::runLCS(vector<string> &oriLogs, int logType, int prec) {
 	clock_t totalTime = clock();
+	JSONNode array(JSON_ARRAY);
 	for (uint i=0; i<oriLogs.size(); i++) {
 #ifdef PRINT_LCS
 		cout<<i<<": log tokens";
 		cout<<i<<": "<<oriLogs[i]<<endl;
 #endif
 		getLCS(oriLogs[i], logType, prec);
-		JSONNode array(JSON_ARRAY);
 		JSONNode items(JSON_NODE);
 		items.push_back(JSONNode("keyNo", m_LCSList[i]));
 		items.push_back(JSONNode("timeStamp", m_logTimeStamp[i]));
 		items.push_back(JSONNode("oriTokens", Utils::VectoString(m_logTokens[i])));
 		array.push_back(items);
-		cout << array.write_formatted() << std::endl;
 	}
+	cout << array.write_formatted() << std::endl;
 	m_totalTime += clock()-totalTime;
 	if (m_bSplit)
 		splitLCSMap();
