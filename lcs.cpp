@@ -1503,7 +1503,7 @@ void LCSParser::dumpLCSMap() {
 		array.push_back(child);
 		cnt++;
 	}
-	ofstream fout("output.txt");
+	ofstream fout("LCSmap.txt");
 	fout << array.write_formatted() << std::endl;
 	fout.close();
 }

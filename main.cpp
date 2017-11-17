@@ -82,23 +82,22 @@ int main(int argc, char* argv[]) {
 	cout<<"fileName: "<<fileName<<endl;
 	cout<<"log type: "<<logType<<endl;*/
 	
-	/*int threshold = 10;
-	vector<string> *oriLogs = new vector<string>();
+	int threshold = 2;
+	vector<string> oriLogs;
 	while (true) {
-		oriLogs->clear();
+		oriLogs.clear();
 		//Utils::readFile(fileName, oriLogs);
 		int cnt = 0;
 		string line;
-		while (cnt < threshold || getline(cin, line)) {
-			oriLogs->push_back(line);
+		while (cnt < threshold && getline(cin, line)) {
+			oriLogs.push_back(line);
 			cnt ++;
-			cout << line << cnt << endl;
+			cout << line << endl;
 		}
-		run_lcs(*oriLogs, logType, 0, prec);
+		run_lcs(oriLogs, logType, 0, prec);
 	}
-	delete oriLogs;*/
 
-	vector<string> oriLogs;
+	/*vector<string> oriLogs;
 	Utils::readFile(fileName, oriLogs);
 
 	if (type=="run_lcs_basic")
@@ -112,7 +111,7 @@ int main(int argc, char* argv[]) {
 	}
 	if (type=="run_iplom") {
 		run_iplom(oriLogs,  logType);
-	}
+	}*/
 
 	/*Test tt;
 	if (type=="test_lcs")
