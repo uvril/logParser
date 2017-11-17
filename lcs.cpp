@@ -1503,7 +1503,9 @@ void LCSParser::dumpLCSMap() {
 		array.push_back(child);
 		cnt++;
 	}
-	cout << array.write_formatted() << std::endl;
+	ofstream fout("output.txt");
+	fout << array.write_formatted() << std::endl;
+	fout.close();
 }
 
 void LCSParser::dumpLCSMapSum() {

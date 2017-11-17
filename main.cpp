@@ -82,31 +82,21 @@ int main(int argc, char* argv[]) {
 	cout<<"fileName: "<<fileName<<endl;
 	cout<<"log type: "<<logType<<endl;*/
 	
-	/*int threshold = 1000;
+	/*int threshold = 10;
+	vector<string> *oriLogs = new vector<string>();
 	while (true) {
-		vector<string> oriLogs;
+		oriLogs->clear();
 		//Utils::readFile(fileName, oriLogs);
 		int cnt = 0;
 		string line;
-		thread workthread;
-		while (getline(cin, line)) {
-			oriLogs.push_back(line);
+		while (cnt < threshold || getline(cin, line)) {
+			oriLogs->push_back(line);
 			cnt ++;
 			cout << line << cnt << endl;
 		}
-		if (type=="run_lcs_basic")
-			run_lcs(oriLogs, logType, 0, prec);
-		if (type=="run_lcs_split")
-			run_lcs(oriLogs, logType, 1, prec);
-		if (type=="run_lcs_split_merge")
-			run_lcs(oriLogs, logType, 3, prec);
-		if (type=="run_clustering") {
-			run_clustering(oriLogs, logType);
-		}
-		if (type=="run_iplom") {
-			run_iplom(oriLogs,  logType);
-		}
-	}*/
+		run_lcs(*oriLogs, logType, 0, prec);
+	}
+	delete oriLogs;*/
 
 	vector<string> oriLogs;
 	Utils::readFile(fileName, oriLogs);
