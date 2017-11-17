@@ -11,6 +11,7 @@
 
 void run_lcs(vector<string> &oriLogs, int logType, int smOption, int prec) { // last option: precheck type
   // lcs parser
+	//cout << "!!!!!" << endl;
 	LCSParser parser;
 	parser.m_bSplit = (smOption & 0x01) ? true:false;
 	parser.m_bMerge = (smOption & 0x02) ? true:false;
@@ -65,7 +66,7 @@ int main(int argc, char* argv[]) {
 		else if (strcmp(argv[3], "spark")==0)
 			logType = 3;
 	}
-	int prec=-1;
+	int prec = -1;
 	if (argc>4) {
 		if (strcmp(argv[4], "prefix")==0)
 			prec = prefix;
@@ -80,6 +81,33 @@ int main(int argc, char* argv[]) {
 	/*cout<<"method: "<<type<<endl;
 	cout<<"fileName: "<<fileName<<endl;
 	cout<<"log type: "<<logType<<endl;*/
+	
+	/*int threshold = 1000;
+	while (true) {
+		vector<string> oriLogs;
+		//Utils::readFile(fileName, oriLogs);
+		int cnt = 0;
+		string line;
+		thread workthread;
+		while (getline(cin, line)) {
+			oriLogs.push_back(line);
+			cnt ++;
+			cout << line << cnt << endl;
+		}
+		if (type=="run_lcs_basic")
+			run_lcs(oriLogs, logType, 0, prec);
+		if (type=="run_lcs_split")
+			run_lcs(oriLogs, logType, 1, prec);
+		if (type=="run_lcs_split_merge")
+			run_lcs(oriLogs, logType, 3, prec);
+		if (type=="run_clustering") {
+			run_clustering(oriLogs, logType);
+		}
+		if (type=="run_iplom") {
+			run_iplom(oriLogs,  logType);
+		}
+	}*/
+
 	vector<string> oriLogs;
 	Utils::readFile(fileName, oriLogs);
 
@@ -96,7 +124,7 @@ int main(int argc, char* argv[]) {
 		run_iplom(oriLogs,  logType);
 	}
 
-	Test tt;
+	/*Test tt;
 	if (type=="test_lcs")
 		tt.test_lcs2();
 	if (type=="test_clustering")
@@ -104,6 +132,5 @@ int main(int argc, char* argv[]) {
 	if (type=="test_iplom")
 		tt.test_iplom();
 	if (type=="test_logTrie")
-		tt.test_logTrie2();
-
+		tt.test_logTrie2();*/
 }
