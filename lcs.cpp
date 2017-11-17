@@ -85,7 +85,7 @@ LCSParser::~LCSParser() {
 
 }
 
-void LCSParser::getLCS(string &oriLog, int logType, int prec) {
+bool LCSParser::getLCS(string &oriLog, int logType, int prec) {
 	m_preCheckMethod = prec;
 	clock_t prefixt=clock();
 	if (m_nLines>0 && m_nLines  == 172) {
@@ -96,7 +96,7 @@ void LCSParser::getLCS(string &oriLog, int logType, int prec) {
 	vector<string> logTokens;
 	string logTimeStamp;
 	if (!Utils::preProcessLog(oriLog, logTokens, logType, logTimeStamp))
-		return;
+		return false;
 	m_logTokens.push_back(logTokens); // now just for split purpose
 	m_logTimeStamp.push_back(logTimeStamp);
 #ifdef PRINT_LCS
@@ -119,7 +119,7 @@ void LCSParser::getLCS(string &oriLog, int logType, int prec) {
 			m_LCSList[m_nLines] = idInLCSMap;
 			m_nLines++;
 			m_prefixTime += clock()-prefixt;
-			return;
+			return true;
 		}
 
 		// not found in prefix, try to find in preCheckLCS
@@ -127,7 +127,7 @@ void LCSParser::getLCS(string &oriLog, int logType, int prec) {
 		if (preCheckLCS(logTokens, m_nLines)>=0) { // found a match
 			m_nLines++;
 			m_prefixTime += clock()-prefixt;
-			return;
+			return true;
 		}
 
 		m_prefixTime += clock()-prefixt;
@@ -137,7 +137,7 @@ void LCSParser::getLCS(string &oriLog, int logType, int prec) {
 		if (preCheckLCS(logTokens, m_nLines)>=0) { // found a match
 			m_nLines++;
 			m_prefixTime += clock()-prefixt;
-			return;
+			return true;
 		}
 		m_prefixTime += clock()-prefixt;
 	}
@@ -146,7 +146,7 @@ void LCSParser::getLCS(string &oriLog, int logType, int prec) {
 		if (preHashCheckLCS1(logTokens, m_nLines)>=0) { // found a match
 			m_nLines++;
 			m_prefixTime += clock()-prefixt;
-			return;
+			return true;
 		}
 		m_prefixTime += clock()-prefixt;
 	}
@@ -154,7 +154,7 @@ void LCSParser::getLCS(string &oriLog, int logType, int prec) {
 		// find in invertedList
 		if (preInvertedList(logTokens, m_nLines)>=0) { // found a match
 			m_nLines++;
-			return;
+			return true;
 		}
 	}
 // no match in prefix tree, find using naive way
@@ -250,6 +250,7 @@ void LCSParser::getLCS(string &oriLog, int logType, int prec) {
 	}
 	m_lcsStrTime += clock()-lcsTime;
 	m_nLines++;
+	return true;
 }
 
 void LCSParser::adjustLCSMap(vector<LCSObject>::iterator &oldLCSIt,
@@ -1556,11 +1557,12 @@ void LCSParser::runLCS(vector<string> &oriLogs, int logType, int prec) {
 		cout<<i<<": log tokens";
 		cout<<i<<": "<<oriLogs[i]<<endl;
 #endif
-		getLCS(oriLogs[i], logType, prec);
+		if (!getLCS(oriLogs[i], logType, prec)) continue;
 		JSONNode items(JSON_NODE);
-		items.push_back(JSONNode("keyNo", m_LCSList[i]));
-		items.push_back(JSONNode("timeStamp", m_logTimeStamp[i]));
-		items.push_back(JSONNode("oriTokens", Utils::VectoString(m_logTokens[i])));
+		items.push_back(JSONNode("keyNo", m_LCSList[m_nLines-1]));
+		items.push_back(JSONNode("timeStamp", m_logTimeStamp[m_nLines-1]));
+		items.push_back(JSONNode("oriTokens", Utils::VectoString(m_logTokens[m_nLines-1])));
+		items.push_back(JSONNode("key", Utils::VectoString(m_LCSMap[m_LCSList[m_nLines-1]].lcsTokens)));
 		array.push_back(items);
 	}
 	cout << array.write_formatted() << std::endl;

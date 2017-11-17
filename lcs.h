@@ -88,7 +88,7 @@ public:
 	// 1. If number of diff positions is only a "SMALL PERCENT" of whole logStmt, then add it to m_params;
 	// 2. replace candidate LCS with the new LCS and add this logStmt line id to the corresponding value of m_LCSMap;
 	// 3. replace param positions with the new diff positions
-	void getLCS(string &logStmt, int logType, int prec);
+	bool getLCS(string &logStmt, int logType, int prec);
 	void dumpLCSMap();
 	void dumpLCSMapSum();
 	// func to compute length of LCS using dp.
