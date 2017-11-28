@@ -1,3 +1,3 @@
 # Streaming Log Parser
-The project is about a log parser with streaming fashion. It reads log files (.csv), extracts useful infomation(e.g. log keys, timestamps and parameters), then outputs all as json file.
-This work is related to Min Du's paper *Spell: Streaming Parsing of System Event Logs* (**IEEE ICDM 2016**).
+This work is about a log parser with streaming fashion, related to Min Du's papers named <a href="http://www.cs.utah.edu/~mind/papers/spell.pdf">*Spell: Streaming Parsing of System Event Logs*</a> (**IEEE ICDM 2016**) and <a href="http://www.cs.utah.edu/~mind/papers/deepLog.pdf">*DeepLog: Anomaly Detection and Diagnosis from System Logs through Deep Learning*</a> (**ACM CCS 2017**).  
+Currently, the parser could read real-time log files of three different types (.csv), extract useful information(e.g. log keys, timestamps and parameters), then output those information in json.
